@@ -1,0 +1,20 @@
+body{
+    margin:5%;
+    background-color:lightblue;
+    width: 30%;
+    padding: 5%;
+    border:2px solid black;
+}
+ul{
+    
+    width: 30%;
+    margin:5%;
+    padding:5%;
+    background-color:blanchedalmond;
+}
+ 
+.todolist{
+    list-style: none;
+    border-bottom: 1px solid gray;
+    padding: 2em;
+}

@@ -1,0 +1,23 @@
+body{
+    
+    background-color:honeydew;
+}
+
+ul{
+    display:flex;
+   
+    background-color: green;
+   
+}
+
+li{
+    list-style: none;
+    margin: 1em;
+    
+   
+}
+a{
+     text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
