@@ -1,0 +1,26 @@
+$base-color:#A7C6DA;
+$nav-color:#02111B;
+$second-color:#3F4045;
+$text-color:#30292F;
+
+nav{
+    background-color: $nav-color;
+    margin:0;
+   ul{
+       list-style:none;
+       display: flex;
+       li{
+           flex-direction: row;
+           justify-content: space-between;
+                      padding:2%;
+           &:hover{
+               background-color: $second-color;
+           }
+           a{
+                color:$base-color;
+                text-decoration: none;
+                font-size: 1.5em;;
+           }
+       }
+   }
+}
