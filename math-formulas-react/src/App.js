@@ -19,32 +19,35 @@ class App extends React.Component {
                             <li><a href="/area">Area</a></li>
                             <li><a href="/quiz">Quiz</a></li>
                         </ul>
-                        <BrowserRouter>
-                            <Switch>
-                                <Route
-                                    exact
-                                    path="/"
-                                    component={Theory} />
 
-                                <Route
-                                    exact
-                                    path="/perimeter"
-                                    component={Perimeter} />
-                                <Route
-                                    exact
-                                    path="/area"
-                                    component={Area} />
-                                <Route
-                                    exact
-                                    path="/quiz"
-                                    component={Quiz} />
-                                <Route
-                                    path="/*"
-                                    component={NotFound} />
-                            </Switch>
-                        </BrowserRouter>
                     </nav>
                 </header>
+                <main>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route
+                                exact
+                                path="/"
+                                component={Theory} />
+
+                            <Route
+                                exact
+                                path="/perimeter"
+                                component={Perimeter} />
+                            <Route
+                                exact
+                                path="/area"
+                                component={Area} />
+                            <Route
+                                exact
+                                path="/quiz"
+                                component={Quiz} />
+                            <Route
+                                path="/*"
+                                component={NotFound} />
+                        </Switch>
+                    </BrowserRouter>
+                </main>
             </div>
         )
     }
