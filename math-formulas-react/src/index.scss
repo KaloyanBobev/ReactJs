@@ -2,25 +2,53 @@ $base-color:#A7C6DA;
 $nav-color:#02111B;
 $second-color:#3F4045;
 $text-color:#30292F;
+$title-font-size:3em;
+$text-font-size:1.5em;
+body{
+background-color: whitesmoke;
 
+}
 nav{
     background-color: $nav-color;
     margin:0;
-   ul{
+    position: fixed;
+    top:0;
+     width: 100%;
+     ul{
        list-style:none;
        display: flex;
+               margin:0;
        li{
            flex-direction: row;
            justify-content: space-between;
-                      padding:2%;
+                      padding: 2% ;
            &:hover{
                background-color: $second-color;
            }
            a{
                 color:$base-color;
                 text-decoration: none;
-                font-size: 1.5em;;
+                font-size: 1.5em;
            }
        }
    }
+}
+
+main{
+    
+    section{
+        h1{
+            color:$text-color;
+            font-size:$title-font-size;
+        }
+        article{
+            
+            margin:0 0 5% 3%;
+            padding:1%;
+            font-size: $text-font-size;
+           img{
+               background-: $base-color;
+           }
+        }
+    }
 }
