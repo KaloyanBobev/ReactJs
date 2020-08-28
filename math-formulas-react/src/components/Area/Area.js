@@ -4,7 +4,10 @@ class Area extends React.Component {
 
     render() {
         return (
-            <h1>AREA</h1>
+            <section>
+                <h1>AREA</h1>
+            </section>
+
         )
     }
 }
