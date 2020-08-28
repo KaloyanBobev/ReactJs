@@ -5,7 +5,9 @@ class Perimeter extends React.Component {
 
     render() {
         return (
-            <h1>Perimeter</h1>
+            <section>
+                <h1>Perimeter</h1>
+            </section>
         )
     }
 }
