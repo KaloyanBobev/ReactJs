@@ -4,7 +4,10 @@ class Quiz extends React.Component {
 
     render() {
         return (
-            <h1>QUIZ</h1>
+            <section>
+                <h1>QUIZ</h1>
+            </section>
+
         )
     }
 }
