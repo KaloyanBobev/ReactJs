@@ -107,12 +107,12 @@ class Theory extends React.Component {
                 <h1>Theory for square, circle, triangle, rectangle and polygon</h1>
                 {this.state.infos.map((value, index) => {
                     return (
-                        <article>
-                            <h3 key={index}>{value.header}</h3>
-                            <img key={index} src={require("../../assests/" + value.src + ".png")} alt="problem" />
-                            <div key={index}>Information: {value.information}</div>
-                            <div key={index}> Formula: {value.formula}</div>
-                            <div key={index}>Explanation: {value.explanation}</div>
+                        <article key={value.id}>
+                            <h3 >{value.header}</h3>
+                            <img src={require("../../assests/" + value.src + ".png")} alt="problem" />
+                            <div >Information: {value.information}</div>
+                            <div > Formula: {value.formula}</div>
+                            <div >Explanation: {value.explanation}</div>
                         </article>
                     )
                 })}
