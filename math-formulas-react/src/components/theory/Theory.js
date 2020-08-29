@@ -102,26 +102,28 @@ class Theory extends React.Component {
         }
     }
     componentDidMount() {
+
         fetch(data)
             .then(res => res.json())
             .then(data => {
-                this.setState(() => {
-                    console.log(data);
-                    return {
-                        infos: data
+                this.setState({
 
-                    }
+
+                    infos: data.infos
+
+
                 })
 
             })
     }
+
     render() {
         return (
             <section>
                 <h1>Theory for square, circle, triangle, rectangle and polygon</h1>
                 {this.state.infos.map((value, index) => {
                     return (
-                        <article key={value.id}>
+                        <article >
                             <h3 >{value.header}</h3>
                             <img src={require("../../assests/" + value.src + ".png")} alt="problem" />
                             <div >Information: {value.information}</div>
