@@ -1,0 +1,9 @@
+{
+    "name": "Square",
+    "header": "The Perimeter of Square",
+    "information": "A Square is a regular rectangle but have four equal sides A with 90 degrees angles. ",
+    "formula": "P = 4 * A",
+    "explanation": "A is the length of one of the sides.",
+    "src": "perimeter-square",
+    "variable": "Side A: "
+}
