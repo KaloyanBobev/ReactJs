@@ -25,6 +25,12 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 })
 
+router.route('/:id').get((req, res) => {
+    Exercise.findById(res.params.id)
+        .then(exercise => res.json(exercise))
+        .catch(err => res.status(400).json('Error: ' + err));
+})
+
 router.route('/:id').delete((req, res) => {
     Exercise.findByIdAndDelete(req.params.if)
         .then(() => res.json('Exercise deleted.'))
@@ -38,7 +44,13 @@ router.route('/update/:id').post((req, res) => {
             exercise.description = req.body.description;
             exercise.duration = Number(req.body.duration);
             exercise.date = Date.parse(req.body.date);
+
+            exercise.save()
+                .then(() => res.json('Exercise updated!'))
+                .catch(err => res.status(400).json('Error: ' + err));
         })
+
+        .catch(err => res.status(400).json('Error: ' + err));
 })
 
 module.exports = router;
