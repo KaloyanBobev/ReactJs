@@ -1,21 +1,22 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Exercise from '../../backend/models/exercise.model';
 
-const Exercise = props => (
-    < tr >
+
+const Exercises = props => (
+    <tr>
         <td>{props.exercise.username}</td>
-        <td>{props.exercise.descpiption}</td>
+        <td>{props.exercise.description}</td>
         <td>{props.exercise.duration}</td>
         <td>{props.exercise.date.substring(0, 10)}</td>
         <td>
-            <Link to={"/edit" + props.exercise._id}>edit</Link>
-             | <a href="#" onClick={() => {
+            <Link to={"/edit/" + props.exercise._id}>edit</Link>
+              | <a href="#" onClick={() => {
                 props.deleteExercise(props.exercise._id)
             }}>delete</a>
         </td>
-    </tr >
+    </tr>
 )
 
 export default class ExercisesList extends React.Component {
@@ -27,7 +28,7 @@ export default class ExercisesList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhos:5000/exercises/')
+        axios.get('http://localhost:5000/exercises/')
             .then(response => {
                 this.setState({ exercises: response.data })
             })
@@ -45,7 +46,7 @@ export default class ExercisesList extends React.Component {
 
     exercisesList() {
         return this.state.exercises.map(currentExercise => {
-            return <Exercise
+            return <Exercises
                 exercise={currentExercise}
                 deleteExercise={this.deleteExercise}
                 key={currentExercise._id} />
