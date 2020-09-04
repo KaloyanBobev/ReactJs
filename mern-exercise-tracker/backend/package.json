@@ -1,5 +1,6 @@
 {
   "name": "backend",
+  "homepage": "http://exercise-tracker.kaloyanbobev.com/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

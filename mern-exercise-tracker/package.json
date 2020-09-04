@@ -1,5 +1,6 @@
 {
   "name": "mern-exercise-tracker",
+  "homepage": "http://exercise-tracker.kaloyanbobev.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
