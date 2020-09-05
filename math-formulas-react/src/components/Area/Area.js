@@ -25,6 +25,7 @@ class Area extends React.Component {
                             <div >Information: {value.information}</div>
                             <div > Formula: {value.formula}</div>
                             <div >Explanation: {value.explanation}</div>
+                            <label>{value.variable}</label>
                         </article>
                     )
                 })}
