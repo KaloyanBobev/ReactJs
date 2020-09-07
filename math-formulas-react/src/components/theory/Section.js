@@ -1,5 +1,5 @@
 import React from 'react';
-import Variable from '../Perimeter/Variable';
+
 
 export default class Section extends React.Component {
 
@@ -7,7 +7,7 @@ export default class Section extends React.Component {
         return (
             <section>
                 <h1>{this.props.title}</h1>
-                {this.props.info.slice(this.props.from, this.props.end).map((value) => {
+                {this.props.info.map((value) => {
                     return (
                         <article key={value.id}>
                             <h3 >{value.header}</h3>
@@ -15,7 +15,7 @@ export default class Section extends React.Component {
                             <div >Information: {value.information}</div>
                             <div > Formula: {value.formula}</div>
                             <div >Explanation: {value.explanation}</div>
-                            {this.props.isShow ? <Variable var={value.variable} /> : null}
+
                         </article>
                     )
                 })}
