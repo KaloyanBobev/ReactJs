@@ -1,5 +1,6 @@
 import React from 'react';
-import data from '../../data/data.json'
+import data from '../../data/data.json';
+import Section from '../theory/Section';
 
 class Perimeter extends React.Component {
     constructor() {
@@ -14,22 +15,16 @@ class Perimeter extends React.Component {
     }
 
     render() {
+        const title = "Perimeter";
+        const from = 0;
+        const end = 5;
         return (
-            <section>
-                <h1>Perimeter</h1>
-                {this.state.infos.slice(0, 5).map((value) => {
-                    return (
-                        <article key={value.id}>
-                            <h3 >{value.header}</h3>
-                            <img src={require("../../assests/" + value.src + ".png")} alt="problem" />
-                            <div >Information: {value.information}</div>
-                            <div > Formula: {value.formula}</div>
-                            <div >Explanation: {value.explanation}</div>
-                            <label>{value.variable}</label>
-                        </article>
-                    )
-                })}
-            </section>
+            <Section
+                title={title}
+                info={this.state.infos}
+                isShow={true}
+                from={from}
+                end={end} />
         )
     }
 }
