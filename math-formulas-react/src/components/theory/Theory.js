@@ -16,11 +16,12 @@ class Theory extends React.Component {
 
     render() {
         const title = "Theory for square, circle, triangle, rectangle and polygon";
+        const flag = false;
         return (
             <Section
                 title={title}
                 info={this.state.infos}
-                isShow={false}
+                isShow={flag}
             />
         )
     }
