@@ -1,5 +1,7 @@
 import React from 'react';
-import data from '../../data/data.json'
+import data from '../../data/data.json';
+import Section from '../theory/Section';
+
 class Area extends React.Component {
     constructor() {
         super();
@@ -14,22 +16,16 @@ class Area extends React.Component {
         })
     }
     render() {
+        const title = "Area";
+        const from = 5;
+        const end = 10;
         return (
-            <section>
-                <h1>Area</h1>
-                {this.state.infos.slice(5, 10).map((value) => {
-                    return (
-                        <article key={value.id}>
-                            <h3 >{value.header}</h3>
-                            <img src={require("../../assests/" + value.src + ".png")} alt="problem" />
-                            <div >Information: {value.information}</div>
-                            <div > Formula: {value.formula}</div>
-                            <div >Explanation: {value.explanation}</div>
-                            <label>{value.variable}</label>
-                        </article>
-                    )
-                })}
-            </section>
+            <Section
+                title={title}
+                info={this.state.infos}
+                isShow={true}
+                from={from}
+                end={end} />
         )
     }
 }
