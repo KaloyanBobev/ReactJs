@@ -6,6 +6,7 @@ $title-font-size:3em;
 $text-font-size:1.5em;
 body{
 background-color: whitesmoke;
+margin-top:5%;
 
 }
 nav{
@@ -13,15 +14,16 @@ nav{
     margin:0;
     position: fixed;
     top:0;
-     width: 100%;
+    width: 100%;
      ul{
        list-style:none;
        display: flex;
-               margin:0;
+       margin:0;
        li{
            flex-direction: row;
            justify-content: space-between;
-                      padding: 2% ;
+           padding: 1.5%;
+           color:$base-color;
            &:hover{
                background-color: $second-color;
            }
@@ -35,22 +37,26 @@ nav{
 }
 
 main{
-    
-    section{
-        h1{
-            margin:8%;
-            color:$text-color;
+    h1{
+            background-color:$nav-color;
+            padding:5%;
+            color:$base-color;
             font-size:$title-font-size;
+            text-align: center;
         }
+    section{
+        
         article{
-            
             margin:0 0 5% 3%;
             padding:1%;
             font-size: $text-font-size;
            img{
+               margin: 1% 0 1% 0;
                background: $base-color;
            }
-
+            input{
+                width: 3em;
+            }
            .right{
                color:green;
            }
