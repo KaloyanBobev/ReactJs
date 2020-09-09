@@ -6,6 +6,7 @@ import Perimeter from './components/Perimeter/Perimeter';
 import Area from './components/Area/Area';
 import Quiz from './components/Quiz/Quiz';
 import NotFound from './components/NotFound/NotFound';
+
 class App extends React.Component {
 
     render() {
@@ -14,12 +15,12 @@ class App extends React.Component {
                 <header>
                     <nav>
                         <ul>
+                            <li><a href="/"><b>Maths Formulae</b></a></li>
                             <li><a href="/">Theory</a></li>
                             <li><a href="/perimeter">Perimeter</a></li>
                             <li><a href="/area">Area</a></li>
                             <li><a href="/quiz">Quiz</a></li>
                         </ul>
-
                     </nav>
                 </header>
                 <main>
