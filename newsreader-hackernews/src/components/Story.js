@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { getStory } from '../services/hnApi';
 import { StoryWrapper, StoryTitle, StoryMeta, StoryMetaElement } from '../styles/StoryStyles';
-
-export const Story = ({ storyId }) => {
+import { mapTime } from '../mappers/mapTime';
+export const Story = memo(function Story({ storyId }) {
     const [story, setStory] = useState({});
 
     useEffect(() => {
@@ -21,11 +21,11 @@ export const Story = ({ storyId }) => {
                 </span>
                 <span data-testid="story-time">
                     <StoryMetaElement color="#000"> Posted: </StoryMetaElement>
-                    {story.time}
+                    {mapTime(story.time)}
                 </span>
             </StoryMeta>
         </StoryWrapper>
 
 
     ) : null;
-};
+});
