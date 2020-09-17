@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route,
 
@@ -18,7 +18,7 @@ class Header extends React.Component {
 
     render() {
         const name = "Литературен глас";
-        const home = "Home";
+        const home = "Начало";
         const publishedEditions = "Печатни издания";
         const newspapers = "Вестници";
         const books = "Книги и литературни произведения";
@@ -27,12 +27,13 @@ class Header extends React.Component {
         const contacts = "Контакти";
 
         return (
-            <header>
-                <div className="row">
-                    <div className="col-md-12">
-                        <Router>
-                            <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-                                <Navbar.Brand href="/home">{name}</Navbar.Brand>
+
+            <div className="row">
+                <div className="col col-md-12">
+                    <BrowserRouter>
+                        <header>
+                            <Navbar expand="lg" sticky="top">
+                                <Navbar.Brand href="/home" className="logo">{name}</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
@@ -47,7 +48,8 @@ class Header extends React.Component {
                                     </Nav>
                                 </Navbar.Collapse>
                             </Navbar>
-                            <br />
+                        </header>
+                        <main>
                             <Switch>
                                 <Route exact path="/home">
                                     <Home />
@@ -68,10 +70,10 @@ class Header extends React.Component {
                                     <ContactUs />
                                 </Route>
                             </Switch>
-                        </Router>
-                    </div>
+                        </main>
+                    </BrowserRouter>
                 </div>
-            </header>
+            </div>
 
 
 
