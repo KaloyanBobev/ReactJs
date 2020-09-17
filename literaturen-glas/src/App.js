@@ -12,6 +12,7 @@ function App() {
         <div className="col col-md-12">
           <BrowserRouter>
             <Header />
+
             <Main />
           </BrowserRouter>
         </div>
