@@ -1,0 +1,17 @@
+div.message {
+    border: 5px solid black;
+
+    margin: 1% 15%;
+    padding: 2%;
+    border-radius: 10%;
+    box-shadow: 5px 1px 15px green;
+
+    div {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .change {
+        overflow: visible;
+    }
+}
