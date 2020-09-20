@@ -14,6 +14,9 @@ class Main extends React.Component {
         return (
             <main>
                 <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
                     <Route exact path="/home">
                         <Home />
                     </Route>
