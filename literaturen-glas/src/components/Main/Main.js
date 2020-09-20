@@ -20,13 +20,13 @@ class Main extends React.Component {
                     <Route exact path="/home">
                         <Home />
                     </Route>
-                    <Route exact path="/newspapers">
+                    <Route path="/newspapers">
                         <Newspapers />
                     </Route>
-                    <Route exact path="/books">
+                    <Route path="/books">
                         <Books />
                     </Route>
-                    <Route exact path="/photoGallery">
+                    <Route path="/PhotoGallery">
                         <PhotoGallery />
                     </Route>
                     <Route path="/about-us">
