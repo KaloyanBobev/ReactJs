@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import newspapers from '../../data/newspaper.json';
 
 class Newspapers extends React.Component {
@@ -26,14 +26,14 @@ class Newspapers extends React.Component {
                             <h3>{value.date}</h3>
                             <button>
                                 <a href={require(`../../newspapers/${value.href}`)} rel="noopener noreferrer" target="_blank">
-                                    <span class="glyphicon glyphicon-file"></span>Прочети
-                                    </a>
+                                    &#xe043;  Прочети
+                                </a>
                             </button>
 
 
                             <button>
                                 <a href={require(`../../newspapers/${value.href}`)} download>
-                                    <span class="glyphicon glyphicon-download-alt"></span> Свали
+                                    &#xe118; Свали
                             </a>
                             </button>
                         </article>
