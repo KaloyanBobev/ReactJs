@@ -1,9 +1,11 @@
+$background-color: #00a36d;
+
 div.message {
     border: 5px solid black;
-    margin: 3% 15%;
+    margin: 3% 15% 6% 15%;
     padding: 5% 15%;
     border-radius: 8%;
-    box-shadow: 1px 1px 50px green;
+    box-shadow: 1px 1px 50px $background-color;
     background-color: #f2eecb;
     font-size: 1.3rem;
     font-weight: 900;
@@ -18,12 +20,12 @@ div.message {
         font-size: 1rem;
         font-weight: 900;
         font-style: italic;
-        background-color: green;
+        background-color: $background-color;
         border-radius: 10%;
         border-style: outset;
 
         &:hover {
-            box-shadow: 1px 1px 10px green;
+            box-shadow: 1px 1px 10px $background-color;
         }
     }
 }
