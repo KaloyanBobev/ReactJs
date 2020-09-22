@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import Header from './components/Header/Header.js';
 import Main from './components/Main/Main.js';
-import ImportantMessage from './components/Main/ImportantMessage';
+import ImportantMessage from './components/ImportantMessage/ImportantMessage';
 function App() {
 
   return (

@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import AboutUs from '../AboutUs/AboutUs';
 import ContactUs from '../ContactUs/ContactUs';
 import Home from '../Main/Home.js';
-import Newspapers from '../Main/Newspaers';
+import Newspapers from '../Newspaper/Newspapers';
 import Books from '../Main/Books';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
 

@@ -26,7 +26,7 @@ class Newspapers extends React.Component {
                             <h3>{value.date}</h3>
                             <button>
                                 <a href={require(`../../newspapers/${value.href}`)} rel="noopener noreferrer" target="_blank">
-                                    &#xe043;  Прочети
+                                    &#xe043;   Прочети
                                 </a>
                             </button>
 
