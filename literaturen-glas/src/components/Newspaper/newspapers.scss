@@ -1,0 +1,24 @@
+.newsparers {
+    font-style: italic;
+    button {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        border-radius: 5px 5px;
+        background-color: green;
+        &:hover {
+            box-shadow: 1px 1px 10px green;
+        }
+    }
+
+    article {
+        display: flex;
+        margin: 2%;
+        border-bottom: 2px solid gray;
+        button {
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
