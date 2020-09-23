@@ -4,7 +4,6 @@ class Message extends React.Component {
     render() {
         return (
             <div className={this.props.isVisible}>
-                <h2>ПЪРВО МЯСТО</h2>
                 <h3>Димитър ХРИСТОВ Черняев - София</h3>
                 <h3>УБЕЖИЩЕ</h3>
                 <pre><span>В мисълта – убежището на езика,</span><br />
