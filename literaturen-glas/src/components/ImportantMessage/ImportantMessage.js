@@ -23,9 +23,10 @@ class ImportantMessage extends React.Component {
         return (
             <div className="message">
                 <h1>РЕЗУЛТАТИ ОТ КОНКУРС</h1>
+                <h2>ПЪРВО МЯСТО</h2>
                 {this.state.isTextVisible
                     ? <Message isVisible={this.state.isTextVisible} />
-                    : <h2>ПЪРВО МЯСТО....</h2>}
+                    : null}
                 <button onClick={this.handleChange}>{this.state.isTextVisible ? "Прочети по-малко" : "Прочети повече"}</button>
             </div>
         )
