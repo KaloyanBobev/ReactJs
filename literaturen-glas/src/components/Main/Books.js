@@ -28,14 +28,13 @@ class Books extends React.Component {
     render() {
         return (
             <section>
-                <h2 className="">Списък произведения</h2>
+                <h2 className="center">Списък произведения</h2>
                 <input
                     placeholder="Избери име на автор"
                     value={this.state.tracked}
                     onChange={this.filterHadler}
                 />
                 <article className="row">
-
                     <h4 className="col-md-2 offset-md-1">Име на автора</h4>
                     <h4 className="col-md-3">Заглавие</h4>
                     <h4 className="col-md-3">Жанр</h4>
@@ -44,7 +43,6 @@ class Books extends React.Component {
                 {this.state.poems.filter(name => name.author.toLocaleLowerCase().includes(this.state.tracked)).map((book) => {
                     return (
                         <article key={book.id} className="row">
-
                             <div className="col-md-2 offset-md-1">{book.author}</div>
                             <div className="col-md-3">{book.name}</div>
                             <div className="col-md-3">{book.species}</div>
@@ -52,7 +50,6 @@ class Books extends React.Component {
                         </article>
                     )
                 })}
-
             </section>
         )
     }
