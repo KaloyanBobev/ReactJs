@@ -23,13 +23,12 @@ class Newspapers extends React.Component {
         this.setState(prevState => ({
             isReverse: !prevState.isReverse
         }));
-        console.log(this.state.isReverse);
     }
 
     render() {
         return (
             <section className="newsparers">
-                <button onClick={this.handleChange}>{this.state.isReverse ? "Най-нови" : "Най-стари"}</button>
+                <button onClick={this.handleChange}>{this.state.isReverse ? "покажи най-новите" : "покажи най-старите"}</button>
                 { this.state.news.reverse().map((value) => {
                     return (
                         <article key={value.href} className="row align-items-center">
