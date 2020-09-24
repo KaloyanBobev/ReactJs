@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import Header from './components/Header/Header.js';
 import Main from './components/Main/Main.js';
 import ImportantMessage from './components/ImportantMessage/ImportantMessage';
+import Footer from './components/Footer/Footer';
+
 function App() {
 
   return (
@@ -15,6 +17,7 @@ function App() {
             <ImportantMessage />
             <Main />
           </BrowserRouter>
+          <Footer />
         </div>
       </div>
 
