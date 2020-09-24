@@ -13,7 +13,7 @@ $text-color: #654236;
     text-transform: uppercase;
     font-weight: bolder;
     font-style: oblique;
-    text-shadow: 2px 3px 3px $text-color;
+    text-shadow: 2px 3px 3px $flame;
     text-align: center;
 }
 
@@ -21,11 +21,11 @@ header {
     color: $text-color;
     background-color: $background-color;
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 100%;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
+
 img {
     width: 100%;
     height: 40px;
