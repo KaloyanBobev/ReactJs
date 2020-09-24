@@ -2,10 +2,14 @@ $background-color: #00a36d;
 
 .newsparers {
     font-style: italic;
+
+    margin: 0 10%;
     button {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: bolder;
+        font-style: italic;
         border-radius: 5px 5px;
+        margin: 1% 3%;
         background-color: $background-color;
         &:hover {
             box-shadow: 1px 1px 10px $background-color;
@@ -15,12 +19,11 @@ $background-color: #00a36d;
     article {
         display: flex;
         margin: 2%;
-        border-bottom: 2px solid gray;
-        button {
-            a {
-                text-decoration: none;
-                color: black;
-            }
+        border-bottom: 5px solid black;
+
+        a {
+            text-decoration: none;
+            color: black;
         }
     }
 }
