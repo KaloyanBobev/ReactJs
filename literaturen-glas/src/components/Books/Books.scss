@@ -1,0 +1,29 @@
+$background-color: #00a36d;
+$persian-orange: #db995aff;
+#books {
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    h1 {
+        text-align: center;
+    }
+
+    label {
+        margin: 2% 1% 2% 8%;
+    }
+
+    input {
+        width: 15rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    div article {
+        margin: 0 10%;
+
+        border-bottom: 5px solid black;
+
+        &:first-child {
+            border-top: 5px solid black;
+        }
+    }
+}
