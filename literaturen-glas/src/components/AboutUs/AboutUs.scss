@@ -1,0 +1,21 @@
+$background-color: #00a36d;
+#second-article {
+    font-size: 1.1rem;
+    h1,
+    h2 {
+        text-align: left;
+        padding: 2%;
+    }
+    div {
+        padding-top: 2%;
+        font-size: 1.4rem;
+    }
+    a {
+        text-decoration: none;
+        color: $background-color;
+        font-size: 1.4rem;
+        &:hover {
+            text-shadow: 1px 1px 1px green;
+        }
+    }
+}

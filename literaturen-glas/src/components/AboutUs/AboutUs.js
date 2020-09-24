@@ -1,5 +1,7 @@
 import React from 'react';
 import center from '../../data/home.json';
+import './AboutUs.scss';
+
 class AboutUs extends React.Component {
     constructor() {
         super();
@@ -19,7 +21,7 @@ class AboutUs extends React.Component {
 
     render() {
         return (
-            <div id="second-article" className="col-md-8 offset-md-2">
+            <section id="second-article" className="col-md-8 offset-md-2">
                 <h2>{this.state.info.centerHeading}</h2>
                 <div>{this.state.info.fundationCenter}</div>
                 <div>{this.state.info.history}</div>
@@ -30,7 +32,7 @@ class AboutUs extends React.Component {
                     : null}
                 <a href="#second-article" onClick={this.handleChange}>
                     {this.state.isTextTwoVisible ? "Прочети  по-малко" : "Прочети повече"}</a>
-            </div>
+            </section>
         )
     }
 }
