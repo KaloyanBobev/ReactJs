@@ -21,8 +21,8 @@ class ImportantMessage extends React.Component {
     render() {
 
         return (
-            <div className="message">
-                <h1>РЕЗУЛТАТИ ОТ КОНКУРС</h1>
+            <div id="message">
+                <h2>РЕЗУЛТАТИ ОТ КОНКУРС</h2>
                 <h2>ПЪРВО МЯСТО</h2>
                 {this.state.isTextVisible
                     ? <Message isVisible={this.state.isTextVisible} />
