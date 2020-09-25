@@ -14,27 +14,13 @@ class Main extends React.Component {
         return (
             <main>
                 <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route exact path="/home">
-                        <Home />
-                    </Route>
-                    <Route path="/newspapers">
-                        <Newspapers />
-                    </Route>
-                    <Route path="/books">
-                        <Books />
-                    </Route>
-                    <Route path="/PhotoGallery">
-                        <PhotoGallery />
-                    </Route>
-                    <Route path="/about-us">
-                        <AboutUs />
-                    </Route>
-                    <Route path="/contact-us">
-                        <ContactUs />
-                    </Route>
+                    <Route component={Home} exact path="/" />
+                    <Route component={Home} path="/home" />
+                    <Route component={Newspapers} path="/newspapers" />
+                    <Route component={Books} path="/books" />
+                    <Route component={PhotoGallery} path="/photo-gallery" />
+                    <Route component={AboutUs} path="/about" />
+                    <Route component={ContactUs} path="/contact" />
                 </Switch>
             </main>
         )
