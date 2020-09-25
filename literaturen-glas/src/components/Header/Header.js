@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import img from "../../images/raphael-schaller-navbar-2.jpg";
 
@@ -19,19 +19,26 @@ class Header extends React.Component {
         return (
             <div>
                 <header>
+                    {/* <Link to="/">Home</Link>
+                    <Link to="/newspapers">newspapers</Link>
+                    <Link to="/books">books</Link>
+                    <Link to="/photo-gallery">photo-gallery</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/contact">contact</Link> */}
+
                     <Navbar expand="lg" sticky="top">
-                        <Navbar.Brand href="/home" className="logo">{name}</Navbar.Brand>
+                        <Navbar.Brand href="/" to="/" className="logo">{name}</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto ">
-                                <Nav.Link href="/home">{home}</Nav.Link>
+                                <Link to="/home"><Nav.Link href="/home" >{home}</Nav.Link></Link>
                                 <NavDropdown title={publishedEditions} id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="/newspapers">{newspapers}</NavDropdown.Item>
-                                    <NavDropdown.Item href="/books">{books}</NavDropdown.Item>
+                                    <Link to="/newspapers"><NavDropdown.Item href="/newspapers" >{newspapers}</NavDropdown.Item></Link>
+                                    <Link to="/books"><NavDropdown.Item href="/books" >{books}</NavDropdown.Item></Link>
                                 </NavDropdown>
-                                <Nav.Link href="/photoGallery">{photoGallery}</Nav.Link>
-                                <Nav.Link href="/about-us">{forUs}</Nav.Link>
-                                <Nav.Link href="/contact-us">{contacts}</Nav.Link>
+                                <Link to="photo-gallery"><Nav.Link href="/photo-gallery">{photoGallery}</Nav.Link></Link>
+                                <Link to="/about"><Nav.Link href="/about" >{forUs}</Nav.Link></Link>
+                                <Link to="/contact"><Nav.Link href="/contact" >{contacts}</Nav.Link></Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
