@@ -1,5 +1,5 @@
 import React from 'react';
-import center from '../../data/home.json'
+import center from '../../data/home.json';
 import './Home.scss';
 class Home extends React.Component {
     constructor() {
