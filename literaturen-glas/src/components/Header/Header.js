@@ -19,26 +19,19 @@ class Header extends React.Component {
         return (
             <div>
                 <header>
-                    {/* <Link to="/">Home</Link>
-                    <Link to="/newspapers">newspapers</Link>
-                    <Link to="/books">books</Link>
-                    <Link to="/photo-gallery">photo-gallery</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">contact</Link> */}
-
                     <Navbar expand="lg" sticky="top">
                         <Navbar.Brand href="/" to="/" className="logo">{name}</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto ">
-                                <Link to="/home"><Nav.Link href="/home" >{home}</Nav.Link></Link>
+                                <Link to="/home" class="text-decoration-none"><Nav.Link href="/home" >{home}</Nav.Link></Link>
                                 <NavDropdown title={publishedEditions} id="basic-nav-dropdown">
-                                    <Link to="/newspapers"><NavDropdown.Item href="/newspapers" >{newspapers}</NavDropdown.Item></Link>
-                                    <Link to="/books"><NavDropdown.Item href="/books" >{books}</NavDropdown.Item></Link>
+                                    <Link to="/newspapers" class="text-decoration-none"><NavDropdown.Item href="/newspapers" >{newspapers}</NavDropdown.Item></Link>
+                                    <Link to="/books" class="text-decoration-none"><NavDropdown.Item href="/books" >{books}</NavDropdown.Item></Link>
                                 </NavDropdown>
-                                <Link to="photo-gallery"><Nav.Link href="/photo-gallery">{photoGallery}</Nav.Link></Link>
-                                <Link to="/about"><Nav.Link href="/about" >{forUs}</Nav.Link></Link>
-                                <Link to="/contact"><Nav.Link href="/contact" >{contacts}</Nav.Link></Link>
+                                <Link to="photo-gallery" class="text-decoration-none"><Nav.Link href="/photo-gallery">{photoGallery}</Nav.Link></Link>
+                                <Link to="/about" class="text-decoration-none"><Nav.Link href="/about" >{forUs}</Nav.Link></Link>
+                                <Link to="/contact" class="text-decoration-none"><Nav.Link href="/contact" >{contacts}</Nav.Link></Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
