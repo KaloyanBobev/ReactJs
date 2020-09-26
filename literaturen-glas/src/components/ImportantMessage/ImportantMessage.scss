@@ -1,9 +1,9 @@
 $background-color: #00a36d;
 
 div#message {
-    border: 5px solid black;
+    border: 2px solid black;
     margin: 3% 10% 6% 10%;
-    padding: 2% 10%;
+    padding: 2% 5%;
     border-radius: 5px 5px;
     box-shadow: 1px 1px 50px $background-color;
     background-color: #f2eecb;
@@ -16,13 +16,13 @@ div#message {
     }
 
     button {
-        width: 10rem;
-        font-size: 0.9rem;
+        width: 11rem;
+        font-size: 0.8rem;
         font-weight: 900;
         font-style: italic;
         background-color: $background-color;
+        border: 1px solid black;
         border-radius: 5px 5px;
-        border-style: outset;
 
         &:hover {
             box-shadow: 1px 1px 10px $background-color;

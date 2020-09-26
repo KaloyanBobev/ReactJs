@@ -27,7 +27,9 @@ class ImportantMessage extends React.Component {
                 {this.state.isTextVisible
                     ? <Message isVisible={this.state.isTextVisible} />
                     : null}
-                <button onClick={this.handleChange}>{this.state.isTextVisible ? "Прочети по-малко" : "Прочети повече"}</button>
+                <button onClick={this.handleChange}>{this.state.isTextVisible
+                    ? <span>Прочети по-малко ▲</span>
+                    : <span>Прочети повече ▼</span>}</button>
             </div>
         )
     }
