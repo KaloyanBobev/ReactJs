@@ -28,10 +28,13 @@ class AboutUs extends React.Component {
                 {this.state.isTextVisible
                     ? <div>
                         <div>{this.state.info.art}</div>
-                        <div>{this.state.info.base}</div></div>
+                        <div>{this.state.info.base}</div>
+                    </div>
                     : null}
                 <a href="#second-article" onClick={this.handleChange}>
-                    {this.state.isTextTwoVisible ? "Прочети  по-малко" : "Прочети повече"}</a>
+                    {this.state.isTextVisible
+                        ? <span>Прочети по-малко ▲</span>
+                        : <span>Прочети повече ▼</span>}</a>
             </section>
         )
     }
