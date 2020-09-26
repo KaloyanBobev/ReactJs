@@ -18,7 +18,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div id="footer">
-                Всички права запазени. CopyRight година: 2015-{this.state.date}
+                Всички права запазени. CopyRight &#9400; година: 2015-{this.state.date}
             </div>
         )
     }
