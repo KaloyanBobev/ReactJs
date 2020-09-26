@@ -37,7 +37,9 @@ class Home extends React.Component {
                             <div>{this.state.info.contract}</div></div>
                         : null}
                     <a href="#first-article" onClick={this.handleChange}>
-                        {this.state.isTextVisible ? "Прочети по-малко" : "Прочети повече"}</a>
+                        {this.state.isTextVisible
+                            ? <span>Прочети по-малко ▲</span>
+                            : <span>Прочети повече ▼</span>}</a>
                 </div>
 
             </article>
