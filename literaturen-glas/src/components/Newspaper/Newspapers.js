@@ -38,12 +38,12 @@ class Newspapers extends React.Component {
                             <h3 className="col-md-4">{value.date}</h3>
                             <button className="align-self-center">
                                 <a href={require(`../../newspapers/${value.href}`)} rel="noopener noreferrer" target="_blank">
-                                    &#xe043;   Прочети
+                                    <span role="img" aria-label="book"> &#128214; </span>  Прочети
                                 </a>
                             </button>
                             <button className="offset-md-1">
                                 <a href={require(`../../newspapers/${value.href}`)} download>
-                                    &#xe118; Свали
+                                    <span role="img" aria-label="download"> &#8681; </span> Свали
                             </a>
                             </button>
                         </article>
