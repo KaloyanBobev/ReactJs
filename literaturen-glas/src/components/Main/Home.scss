@@ -1,4 +1,4 @@
-$background-color: #00a36d;
+@import "../../globalStylesVariebles.scss";
 
 #home {
     font-size: 1.1rem;
@@ -12,7 +12,7 @@ $background-color: #00a36d;
         font-size: 1.4rem;
         a {
             text-decoration: none;
-            color: $background-color;
+            color: $shadow;
             &:hover {
                 text-shadow: 1px 1px 1px green;
             }
