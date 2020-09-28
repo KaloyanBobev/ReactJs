@@ -1,24 +1,18 @@
-/* SCSS HEX */
-$green-ncs: #00a36dff;
-$persian-orange: #db995aff;
-$liver: #654236ff;
-$chocolate-web: #da7635ff;
-$flame: #e24e1bff;
+@import "../../globalStylesVariebles.scss";
 
-$background-color: #00a36d;
-$text-color: #654236;
 .logo {
+    color: white;
     font-family: Caveat, sans-serif;
-    color: $text-color;
+    color: $shadow;
     text-transform: uppercase;
     font-weight: bolder;
     font-style: oblique;
-    text-shadow: 2px 3px 3px $flame;
+    text-shadow: 2px 3px 3px $shadow;
     text-align: center;
 }
 
 header {
-    color: $text-color;
+    color: $shadow;
     background-color: $background-color;
     font-weight: bolder;
     font-size: 1.3rem;
