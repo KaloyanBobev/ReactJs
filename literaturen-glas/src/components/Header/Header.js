@@ -20,7 +20,7 @@ class Header extends React.Component {
             <div>
                 <header>
                     <Navbar expand="lg" sticky="top">
-                        <Navbar.Brand href="/" to="/" className="logo">{name}</Navbar.Brand>
+                        <Navbar.Brand href="/" className="logo">{name}</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto ">
