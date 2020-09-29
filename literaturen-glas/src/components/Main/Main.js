@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Router } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import AboutUs from '../AboutUs/AboutUs';
 import ContactUs from '../ContactUs/ContactUs';
@@ -15,14 +15,14 @@ class Main extends React.Component {
         return (
             <main>
                 <Switch>
-                    <Route component={Home} exact path="/" />
-                    <Route component={Home} exact path="/home" />
-                    <Route component={Newspapers} exact path="/newspapers" />
-                    <Route component={Books} exact path="/books" />
-                    <Route component={PhotoGallery} exact path="/photo-gallery" />
-                    <Route component={AboutUs} exact path="/about" />
-                    <Route component={ContactUs} exact path="/contact" />
-                    <Route component={NotFound} path="**" />
+                    <Route exact path="/" component={Home} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/newspapers" component={Newspapers} />
+                    <Route path="/books" component={Books} />
+                    <Route path="/photo-gallery" component={PhotoGallery} />
+                    <Route path="/about" component={AboutUs} />
+                    <Route path="/contact" component={ContactUs} />
+                    <Route path="**" component={NotFound} />
                 </Switch>
             </main>
         )
