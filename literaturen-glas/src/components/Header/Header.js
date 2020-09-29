@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import img from "../../images/raphael-schaller-navbar-2.jpg";
 
@@ -19,6 +19,13 @@ class Header extends React.Component {
         return (
             <div>
                 <header>
+                    {/* <NavLink to="/home" class="text-decoration-none">{home}</NavLink>
+
+                    <NavLink to="/newspapers" class="text-decoration-none">{newspapers}</NavLink>
+                    <NavLink to="/books" class="text-decoration-none">{books}</NavLink>
+                    <NavLink to="photo-gallery" class="text-decoration-none">{photoGallery}</NavLink>
+                    <NavLink to="/about" class="text-decoration-none">{forUs}</NavLink>
+                    <NavLink to="/contact" class="text-decoration-none">{contacts}</NavLink> */}
                     <Navbar expand="lg" sticky="top">
                         <Navbar.Brand href="/" className="logo">{name}</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
