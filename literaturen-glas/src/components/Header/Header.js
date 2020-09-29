@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import img from "../../images/raphael-schaller-navbar-2.jpg";
 
