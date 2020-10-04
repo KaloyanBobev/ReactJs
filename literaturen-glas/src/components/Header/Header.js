@@ -19,26 +19,26 @@ class Header extends React.Component {
         return (
             <div>
                 <header>
-                    {/* <NavLink to="/home" class="text-decoration-none">{home}</NavLink>
+                    {/* <NavLink to="/home" className="text-decoration-none">{home}</NavLink>
 
-                    <NavLink to="/newspapers" class="text-decoration-none">{newspapers}</NavLink>
-                    <NavLink to="/books" class="text-decoration-none">{books}</NavLink>
-                    <NavLink to="photo-gallery" class="text-decoration-none">{photoGallery}</NavLink>
-                    <NavLink to="/about" class="text-decoration-none">{forUs}</NavLink>
-                    <NavLink to="/contact" class="text-decoration-none">{contacts}</NavLink> */}
+                    <NavLink to="/newspapers" className="text-decoration-none">{newspapers}</NavLink>
+                    <NavLink to="/books" className="text-decoration-none">{books}</NavLink>
+                    <NavLink to="photo-gallery" className="text-decoration-none">{photoGallery}</NavLink>
+                    <NavLink to="/about" className="text-decoration-none">{forUs}</NavLink>
+                    <NavLink to="/contact" className="text-decoration-none">{contacts}</NavLink> */}
                     <Navbar expand="lg" sticky="top">
                         <Navbar.Brand href="/" className="logo">{name}</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto ">
-                                <Link to="/home" class="text-decoration-none"><Nav.Link href="/home" >{home}</Nav.Link></Link>
+                                <Link to="/home" className="text-decoration-none"><Nav.Link href="/home" >{home}</Nav.Link></Link>
                                 <NavDropdown title={publishedEditions} id="basic-nav-dropdown">
-                                    <Link to="/newspapers" class="text-decoration-none"><NavDropdown.Item href="/newspapers" >{newspapers}</NavDropdown.Item></Link>
-                                    <Link to="/books" class="text-decoration-none"><NavDropdown.Item href="/books" >{books}</NavDropdown.Item></Link>
+                                    <Link to="/newspapers" className="text-decoration-none"><NavDropdown.Item href="/newspapers" >{newspapers}</NavDropdown.Item></Link>
+                                    <Link to="/books" className="text-decoration-none"><NavDropdown.Item href="/books" >{books}</NavDropdown.Item></Link>
                                 </NavDropdown>
-                                <Link to="photo-gallery" class="text-decoration-none"><Nav.Link href="/photo-gallery">{photoGallery}</Nav.Link></Link>
-                                <Link to="/about" class="text-decoration-none"><Nav.Link href="/about" >{forUs}</Nav.Link></Link>
-                                <Link to="/contact" class="text-decoration-none"><Nav.Link href="/contact" >{contacts}</Nav.Link></Link>
+                                <Link to="photo-gallery" className="text-decoration-none"><Nav.Link href="/photo-gallery">{photoGallery}</Nav.Link></Link>
+                                <Link to="/about" className="text-decoration-none"><Nav.Link href="/about" >{forUs}</Nav.Link></Link>
+                                <Link to="/contact" className="text-decoration-none"><Nav.Link href="/contact" >{contacts}</Nav.Link></Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
