@@ -6,7 +6,8 @@ class Message extends React.Component {
             <div className={this.props.isVisible}>
                 <h3>Димитър ХРИСТОВ Черняев - София</h3>
                 <h3>УБЕЖИЩЕ</h3>
-                <pre><span>В мисълта – убежището на езика,</span><br />
+                <pre>
+                    <span>В мисълта – убежището на езика,</span><br />
                     <span>когато болката ме предизвика,</span><br />
                     <span>аз хвърлям семена, вместо куршуми,</span><br />
                     <span>дори да съм прострелян с хулни думи,</span><br />
@@ -67,7 +68,6 @@ class Message extends React.Component {
                     <span>Аз съм във всички неправилно спрели коли.</span><br />
                     <span>Каквото поискаш прави ми, но не прегръщай,</span><br />
                     <span>защото когато си тръгна, досмърт ще боли...</span><br />
-
                 </pre>
 
                 <h2>ТРЕТО МЯСТО</h2>
@@ -194,10 +194,10 @@ class Message extends React.Component {
                     <span>утихнало след бури безпощадни.</span><br />
                     <span>Вдигам котва и отплавам.</span><br />
                     <span>Остана ли, ще се удавя.</span><br />
-                </pre></div>
+                </pre>
+            </div>
         )
     }
-
 }
 
 export default Message;

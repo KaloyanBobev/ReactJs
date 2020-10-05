@@ -3,7 +3,7 @@
 div#message {
     border: 2px solid black;
     margin: 3% 10% 6% 10%;
-    padding: 2% 5%;
+    padding: 2% 10%;
     border-radius: 5px 5px;
     box-shadow: 1px 1px 50px $background-color;
     background-color: #f2eecb;
@@ -26,6 +26,19 @@ div#message {
 
         &:hover {
             box-shadow: 1px 1px 10px $background-color;
+        }
+    }
+    @media (max-width: 800px) {
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        pre {
+            font-size: 0.7rem;
         }
     }
 }
