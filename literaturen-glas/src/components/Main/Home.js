@@ -2,7 +2,9 @@ import React from 'react';
 import ImportantMessage from '../ImportantMessage/ImportantMessage';
 import center from '../../data/home.json';
 import './Home.scss';
+
 class Home extends React.Component {
+
     constructor() {
         super();
         this.state = {
@@ -20,7 +22,6 @@ class Home extends React.Component {
     handleChange() {
         this.setState(prevState => ({ isTextVisible: !prevState.isTextVisible }))
     }
-
 
     render() {
         return (
