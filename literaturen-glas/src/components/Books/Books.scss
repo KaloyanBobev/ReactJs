@@ -17,7 +17,11 @@
         border-style: none;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
     }
-
+    @media (max-width: 556px) {
+        input {
+            margin: 3% 1% 5% 8%;
+        }
+    }
     div article {
         margin: 0 10%;
 
