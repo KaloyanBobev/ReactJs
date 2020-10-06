@@ -1,8 +1,14 @@
 @import "../../globalStylesVariebles.scss";
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     overflow-x: hidden;
 }
+
 .logo {
     color: white;
     font-family: Caveat, sans-serif;
@@ -20,8 +26,14 @@ header {
     background-color: $background-color;
     font-weight: bolder;
     font-size: 1.3rem;
-    width: 100%;
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.drop-down-menu > div {
+    background-color: $background-color;
+    & > a:hover {
+        background-color: darken($background-color, 20%);
+    }
 }
 
 img {
