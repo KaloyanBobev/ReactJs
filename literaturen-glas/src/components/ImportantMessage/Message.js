@@ -160,7 +160,7 @@ class Message extends React.Component {
                 </pre>
 
                 <h3>Мария Станчева Ганчева  -  Несебър </h3>
-                <h2>* * *</h2>
+                <h3>* * *</h3>
                 <pre>
                     <span>Когато нежността ми се изчерпа</span><br />
                     <span>от твойта глупост и безочие,</span><br />
