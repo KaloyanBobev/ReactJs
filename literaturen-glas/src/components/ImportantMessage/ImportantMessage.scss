@@ -10,6 +10,10 @@ div#message {
     font-size: 1.2rem;
     font-weight: 900;
 
+    h2 {
+        color: darken($background-color, 25%);
+    }
+
     h2,
     h3 {
         margin-top: 2%;
@@ -17,6 +21,7 @@ div#message {
 
     button {
         width: 11rem;
+        padding: 0.2rem;
         font-size: 0.8rem;
         font-weight: 900;
         font-style: italic;
