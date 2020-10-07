@@ -2,9 +2,10 @@
 
 #home {
     font-size: 1.1rem;
+
     h1,
     h2 {
-        text-align: left;
+        color: darken($background-color, 25%);
         padding: 2%;
     }
     div {
@@ -16,7 +17,7 @@
             text-decoration: none;
             color: $shadow;
             &:hover {
-                text-shadow: 1px 1px 1px green;
+                text-shadow: 1px 1px 1px $shadow;
             }
         }
     }
