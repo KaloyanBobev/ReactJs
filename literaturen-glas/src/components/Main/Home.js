@@ -36,10 +36,11 @@ class Home extends React.Component {
                         <h2>{this.state.info.chairman}</h2>
                         <div>{this.state.info.firstEdition}</div>
                         {this.state.isTextVisible
-                            ? <div>
+                            ? <p>
                                 <div>{this.state.info.fundation}</div>
                                 <div>{this.state.info.newspaper}</div>
-                                <div>{this.state.info.contract}</div></div>
+                                <div>{this.state.info.contract}</div>
+                            </p>
                             : null}
                         <a href="#first-article" onClick={this.handleChange}>
                             {this.state.isTextVisible
