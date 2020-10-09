@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style.scss';
+import Weather from './weather';
 export default class TopSection extends React.Component {
     constructor(props) {
         super(props);
@@ -10,9 +12,9 @@ export default class TopSection extends React.Component {
     render() {
 
         return (
-            <div className="cop-container">
-                <div className="title">Weather Up</div>
-                <div className=""></div>
+            <div className="top-container">
+                <h1 className="title">Weather Up</h1>
+                <Weather />
             </div>
         )
     }
