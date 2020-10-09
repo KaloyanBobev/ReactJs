@@ -1,9 +1,15 @@
 import React from 'react';
 import './sass/app.scss'
+
+import TopSection from './components/top';
+import BottomSection from './components/bottom';
 function App() {
   return (
     <div className="app-container">
-      <div className="main-container">Main Container</div>
+      <div className="main-container">
+        <div className="top-section"><TopSection /></div>
+        <div className="bottom-section"><BottomSection /></div>
+      </div>
     </div>
   );
 }
