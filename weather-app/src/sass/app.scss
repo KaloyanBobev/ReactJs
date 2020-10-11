@@ -27,7 +27,17 @@ body,
             flex: 0 0 50%;
         }
         .bottom-section {
+            background-size: 600px 250px;
             flex: 0 0 50%;
         }
+    }
+}
+
+.btn {
+    border: 1px solid #ddd;
+    margin-bottom: 2%;
+
+    &:focus {
+        outline: none;
     }
 }
