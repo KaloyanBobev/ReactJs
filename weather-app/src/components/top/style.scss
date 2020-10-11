@@ -13,7 +13,6 @@
 }
 
 .weather-container {
-    margin-top: 1rem;
     color: #fff;
     .header {
         display: flex;
@@ -39,4 +38,12 @@
         flex-direction: row;
         justify-content: center;
     }
+}
+
+.btn-select-location {
+    border-radius: 2px;
+    background-color: #49dcc2;
+    font-size: 0.8rem;
+    font-family: Roboto, sans-serif;
+    color: #222;
 }
