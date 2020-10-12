@@ -1,17 +1,60 @@
 import React from 'react';
+import axios from "axios";
 import './sass/app.scss'
 
 import TopSection from './components/top';
 import BottomSection from './components/bottom';
-function App() {
-  return (
-    <div className="app-container">
-      <div className="main-container">
-        <div className="top-section"><TopSection /></div>
-        <div className="bottom-section"><BottomSection /></div>
+
+const WEATHER_KEY = "2db66cfa44f64319a37102115201210";
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      cityName: "London",
+      forecastDays: 5,
+      isLoading: false
+    }
+  }
+
+  componentDidMount() {
+    const { cityName, forecastDays } = this.state;
+
+    const URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY} &q=${cityName} &days=${forecastDays}`;
+    axios.get(URL)
+      .then(response => {
+        return response.data;
+      }).then((data) => {
+        this.setState({
+          isLoading: true,
+          temp_c: data.current.temp_c,
+          isDay: data.current.is_day,
+          text: data.current.condition.text,
+          iconURL: data.current.condition.icon,
+
+        })
+      })
+      .catch((err) => {
+        if (err) {
+          console.error("cannot fetch weather date from API", err);
+        }
+      })
+
+  }
+
+  render() {
+    const { isLoading, cityName, temp_c, isDay, text, iconURL } = this.state;
+
+    return (
+      <div className="app-container" >
+        <div className="main-container">
+          {!isLoading && <h1>Loading Weather...</h1>}
+          {isLoading && <div className="top-section"><TopSection location={cityName} temp_c={temp_c} isDay={isDay} text={text} iconURL={iconURL} /></div>}
+          <div className="bottom-section"><BottomSection /></div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
