@@ -14,15 +14,15 @@ class App extends React.Component {
     super();
     this.state = {
       cityName: "London",
-      forecastDays: 5,
+      numForecastDays: 4,
       isLoading: false
     }
   }
 
   updateWeather() {
-    const { cityName, forecastDays } = this.state;
+    const { cityName, numForecastDays } = this.state;
 
-    const URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY} &q=${cityName} &days=${forecastDays}`;
+    const URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY} &q=${cityName} &days=${numForecastDays}`;
     axios.get(URL)
       .then(response => {
         return response.data;
@@ -33,6 +33,8 @@ class App extends React.Component {
           isDay: data.current.is_day,
           text: data.current.condition.text,
           iconURL: data.current.condition.icon,
+          forecastdays: data.forecast.forecastday
+
         })
       })
       .catch((err) => {
@@ -56,7 +58,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isLoading, cityName, temp_c, isDay, text, iconURL } = this.state;
+    const { isLoading, cityName, temp_c, isDay, text, iconURL, forecastdays } = this.state;
 
     return (
       <div className="app-container" >
@@ -70,7 +72,9 @@ class App extends React.Component {
             iconURL={iconURL}
             eventEmitter={this.props.eventEmitter}
           /></div>}
-          <div className="bottom-section"><BottomSection /></div>
+          <div className="bottom-section">
+            <BottomSection forecastdays={forecastdays} />
+          </div>
         </div>
       </div>
     );
