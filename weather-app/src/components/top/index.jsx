@@ -11,12 +11,25 @@ export default class TopSection extends React.Component {
             isSelectLocationOpen: false,
         };
         this.onToggleSelectLocation = this.onToggleSelectLocation.bind(this);
+        this.onSelectCity = this.onSelectCity.bind(this);
+        this.onLocationNameChange = this.onLocationNameChange.bind(this);
     }
 
     onToggleSelectLocation() {
         this.setState((prevState) => ({
             isSelectLocationOpen: !prevState.isSelectLocationOpen
         }))
+    }
+
+    onLocationNameChange(e) {
+        this.setState({ locationName: e.target.value })
+    }
+
+    onSelectCity() {
+        const { locationName } = this.state;
+        const { eventEmitter } = this.props;
+        eventEmitter.emit("updateWeather", locationName);
+        this.setState({ isSelectLocationOpen: false })
     }
 
     render() {
@@ -44,8 +57,8 @@ export default class TopSection extends React.Component {
                             <div className="poppup-container" ref={ref} style={style} data-placement={placement}>
                                 <div className="form-container">
                                     <label htmlFor="location-name">Location Name:</label>
-                                    <input id="location-name" type="text" placeholder="City name"></input>
-                                    <button className="btn btn-select-location" >Select</button>
+                                    <input id="location-name" type="text" placeholder="City name" onChange={this.onLocationNameChange}></input>
+                                    <button className="btn btn-select-location" onClick={this.onSelectCity}>Select</button>
                                 </div>
                                 <div ref={arrowProps.ref} style={arrowProps.style} />
                             </div>
