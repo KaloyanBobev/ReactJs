@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { EventEmitter } from 'events';
 
 export default class Store extends React.Component {
 
@@ -8,11 +9,16 @@ export default class Store extends React.Component {
         this.state = {
             appName: 'Weather App'
         }
+        this.eventEmitter = new EventEmitter();
+
     }
 
     render() {
         return React.Children.map(this.props.children, (child) => {
-            return React.cloneElement(child, { ...this.state });
+            return React.cloneElement(child, {
+                ...this.state,
+                eventEmitter: this.eventEmitter
+            });
         });
     }
 
