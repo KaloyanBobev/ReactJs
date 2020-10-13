@@ -3,12 +3,8 @@ import './style.scss';
 
 export default class Weather extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const { location, temp_c, isDay, text, iconURL } = this.props;
+        const { location, temp_c, text, iconURL } = this.props;
         return (
             <div className="weather-container">
                 <h3 className="header">{location}</h3>
