@@ -29,6 +29,7 @@ class App extends React.Component {
       }).then((data) => {
         this.setState({
           isLoading: true,
+          last_updated: data.location.localtime,
           temp_c: data.current.temp_c,
           isDay: data.current.is_day,
           text: data.current.condition.text,
@@ -53,12 +54,11 @@ class App extends React.Component {
     eventEmitter.on("updateWeather", (data) => {
       this.setState({ cityName: data }, () => { this.updateWeather(); })
 
-      console.log("LocationName", data);
     })
   }
 
   render() {
-    const { isLoading, cityName, temp_c, isDay, text, iconURL, forecastdays } = this.state;
+    const { isLoading, last_updated, cityName, temp_c, isDay, text, iconURL, forecastdays } = this.state;
 
     return (
       <div className="app-container" >
@@ -66,6 +66,7 @@ class App extends React.Component {
           {!isLoading && <h1>Loading Weather...</h1>}
           {isLoading && <div className="top-section"><TopSection
             location={cityName}
+            last_updated={last_updated}
             temp_c={temp_c}
             isDay={isDay}
             text={text}
