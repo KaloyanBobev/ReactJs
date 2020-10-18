@@ -1,19 +1,5 @@
 @import "../../globalStylesVariebles.scss";
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    max-width: 96%;
-    margin: auto !important;
-}
-@media (max-width: 800px) {
-    body {
-        max-width: 92%;
-    }
-}
 .logo {
     color: white;
     font-family: Caveat, sans-serif;
