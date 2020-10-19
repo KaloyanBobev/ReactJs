@@ -1,4 +1,22 @@
 @import "../../globalStylesVariebles.scss";
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .main-container {
+        width: 100%;
+    }
+    .side-nav {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        display: block;
+    }
+}
 
 #home {
     font-size: 1.1rem;
@@ -21,10 +39,4 @@
             }
         }
     }
-}
-.container {
-    display: flex;
-    min-width: 96%;
-    margin: 2%;
-    width: 100%;
 }
