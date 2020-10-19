@@ -9,15 +9,11 @@ function App() {
 
   return (
     <div>
-      <div className="row">
-        <div className="col col-md-12">
-          <BrowserRouter>
-            <Header />
-            <Main />
-          </BrowserRouter>
-          <Footer />
-        </div>
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Main />
+      </BrowserRouter>
+      <Footer />
     </div>
   );
 }
