@@ -2,6 +2,7 @@ import React from 'react';
 import ImportantMessage from '../ImportantMessage/ImportantMessage';
 import center from '../../data/home.json';
 import './Home.scss';
+import SideNav from '../SideNav/SideNav';
 
 class Home extends React.Component {
 
@@ -25,29 +26,31 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                <ImportantMessage />
-
-                <article id="home" className="row">
-                    <div id="first-article" className="col-md-8  offset-md-2">
-                        <h1>{this.state.info.mainHeader}</h1>
-                        <h2>{this.state.info.teacher}</h2>
-                        <h2>{this.state.info.voice}</h2>
-                        <h2>{this.state.info.chairman}</h2>
-                        <div>{this.state.info.firstEdition}</div>
-                        {this.state.isTextVisible
-                            ? <p>
-                                <div>{this.state.info.fundation}</div>
-                                <div>{this.state.info.newspaper}</div>
-                                <div>{this.state.info.contract}</div>
-                            </p>
-                            : null}
-                        <a href="#first-article" onClick={this.handleChange}>
+            <div className="container">
+                <div className="main-container">
+                    <ImportantMessage />
+                    <article id="home" className="row">
+                        <div id="first-article" className="col-md-8  offset-md-2">
+                            <h1>{this.state.info.mainHeader}</h1>
+                            <h2>{this.state.info.teacher}</h2>
+                            <h2>{this.state.info.voice}</h2>
+                            <h2>{this.state.info.chairman}</h2>
+                            <div>{this.state.info.firstEdition}</div>
                             {this.state.isTextVisible
-                                ? <span>Прочети по-малко ▲</span>
-                                : <span>Прочети повече ▼</span>}</a>
-                    </div>
-                </article>
+                                ? <p>
+                                    <div>{this.state.info.fundation}</div>
+                                    <div>{this.state.info.newspaper}</div>
+                                    <div>{this.state.info.contract}</div>
+                                </p>
+                                : null}
+                            <a href="#first-article" onClick={this.handleChange}>
+                                {this.state.isTextVisible
+                                    ? <span>Прочети по-малко ▲</span>
+                                    : <span>Прочети повече ▼</span>}</a>
+                        </div>
+                    </article>
+                </div>
+                <SideNav />
             </div>
         )
     }
