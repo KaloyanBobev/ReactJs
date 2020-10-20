@@ -9,7 +9,7 @@ export default class SideNav extends React.Component {
     constructor() {
         super();
         this.state = {
-            query: "София",
+            query: "Стара Загора",
             temp: '',
             country: '',
             weather: '',
@@ -19,12 +19,10 @@ export default class SideNav extends React.Component {
         }
         this.changeHandler = this.changeHandler.bind(this);
         this.searchTown = this.searchTown.bind(this);
-
     }
 
     changeHandler(e) {
         this.setState({ query: e.target.value })
-
     }
 
     fetchData() {
@@ -36,19 +34,36 @@ export default class SideNav extends React.Component {
                     country: data.sys.country,
                     temp: data.main.temp,
                     weather: data.weather[0].main,
-
                     query: ""
                 })
                 console.log(data);
             })
+            .catch(error => {
+                console.log("An error occurred while trying to fetch data from Foursquare: " +
+                    error)
+            })
     }
+
     componentDidMount() {
         this.fetchData();
     }
+
     searchTown(event) {
         if (event.key === "Enter") {
             this.fetchData();
         }
+    }
+
+    dateBuilder(d) {
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let days = ["Sunday", "Monday", "Tuesday", "Wendesday", "Thursday", "Friday", "Saturday"];
+        let day = days[d.getDay()];
+        let date = d.getDate();
+        let month = months[d.getMonth()];
+        let year = d.getFullYear();
+        // let hour = d.getHours();
+        // let minutes = d.getMinutes();
+        return `${day} ${date} ${month} ${year}`
     }
 
     render() {
@@ -63,21 +78,15 @@ export default class SideNav extends React.Component {
                     onChange={this.changeHandler}
                     onKeyUp={this.searchTown}
                 />
-
                 <div className="location-box">
-                    <div>{this.state.name}, {this.state.country}</div>
-                    <div className="date"></div>
+                    <div className="location">{this.state.name}, {this.state.country}</div>
+                    <div className="date">{this.dateBuilder(new Date())}</div>
                 </div>
 
                 <div className="weather-box">
                     <div>{this.state.weather}</div>
-                    <div>{Math.round(this.state.temp)}&#176;C</div>
+                    <div className="temp">{Math.round(this.state.temp)}&#176;C</div>
                 </div>
-
-
-
-
-
             </div>
 
         )
