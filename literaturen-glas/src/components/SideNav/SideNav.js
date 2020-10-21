@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './SideNav.scss';
+import Clock from '../Clock/Clock';
 
 const KEY = "2b5a2ac09bf7d75d7be4aec6429fa12f";
 const BASE = "https://api.openweathermap.org/data/2.5/";
@@ -36,6 +37,7 @@ export default class SideNav extends React.Component {
                     weather: data.weather[0].main,
                     query: ""
                 })
+
                 console.log(data);
             })
             .catch(error => {
@@ -61,14 +63,14 @@ export default class SideNav extends React.Component {
         let date = d.getDate();
         let month = months[d.getMonth()];
         let year = d.getFullYear();
-        // let hour = d.getHours();
-        // let minutes = d.getMinutes();
+
         return `${day} ${date} ${month} ${year}`
     }
 
     render() {
         return (
             <div className="side-nav">
+                <Clock />
                 <h4>Прогноза за времето</h4>
                 <input
                     type="text"
