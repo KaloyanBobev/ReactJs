@@ -8,13 +8,16 @@
         width: 100%;
     }
     .side-nav {
-        margin-left: 10%;
+        margin-left: 5%;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .container {
         display: block;
+    }
+    .side-nav {
+        margin-left: 0 10%;
     }
 }
 
@@ -26,6 +29,7 @@
         color: darken($background-color, 25%);
         padding: 2%;
     }
+
     div {
         margin-left: 2%;
         padding-top: 2%;
