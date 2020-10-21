@@ -30,7 +30,7 @@ class Home extends React.Component {
                 <div className="main-container">
                     <ImportantMessage />
                     <article id="home" className="row">
-                        <div id="first-article" className="col-md-8  offset-md-2">
+                        <div id="first-article" className="col-md-12  offset-md-2">
                             <h1>{this.state.info.mainHeader}</h1>
                             <h2>{this.state.info.teacher}</h2>
                             <h2>{this.state.info.voice}</h2>
