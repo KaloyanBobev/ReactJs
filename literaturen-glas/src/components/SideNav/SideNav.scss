@@ -3,12 +3,12 @@
 .side-nav {
     width: 20rem;
     height: 40rem;
+    margin: 3% 0;
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-
     background-color: $footer;
-    margin: 5% 0;
+
     h4 {
         margin-top: 15%;
         font-size: 2rem;
@@ -44,7 +44,6 @@
     .weather-box {
         font-weight: 700;
         font-size: 1.6rem;
-
         margin: 5% 0;
 
         .temp {
