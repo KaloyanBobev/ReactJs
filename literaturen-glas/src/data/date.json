@@ -1,0 +1,25 @@
+{
+    "months": {
+        "Jan": "Jan",
+        "Feb": "Feb",
+        "Mar": "Mar",
+        "Apr": "Apr",
+        "May": "May",
+        "June": "June",
+        "July": "July",
+        "Aug": "Aug",
+        "Sep": "Sep",
+        "Oct": "Oct",
+        "Nov": "Nov",
+        "Dec": "Dec"
+    },
+    "days": {
+        "sun": "Sunday",
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wen": "Wendesday",
+        "Thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday"
+    }
+}
