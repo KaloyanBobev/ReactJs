@@ -2,6 +2,7 @@ import React from 'react';
 
 import './SideNav.scss';
 import Clock from '../Clock/Clock';
+import datesAndMonths from '../../data/date.json';
 
 const KEY = "2b5a2ac09bf7d75d7be4aec6429fa12f";
 const BASE = "https://api.openweathermap.org/data/2.5/";
@@ -15,7 +16,8 @@ export default class SideNav extends React.Component {
             country: '',
             weather: '',
             feels_like: '',
-
+            daysOfWeek: '',
+            mounthsOfYear: ''
 
         }
         this.changeHandler = this.changeHandler.bind(this);
@@ -48,6 +50,11 @@ export default class SideNav extends React.Component {
 
     componentDidMount() {
         this.fetchData();
+        this.setState({
+            daysOfWeek: datesAndMonths.daysOnBulgarian,
+            mounthsOfYear: datesAndMonths.monthsOnBulgarian
+        })
+
     }
 
     searchTown(event) {
@@ -57,17 +64,36 @@ export default class SideNav extends React.Component {
     }
 
     dateBuilder(d) {
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        let days = ["Sunday", "Monday", "Tuesday", "Wendesday", "Thursday", "Friday", "Saturday"];
-        let day = days[d.getDay()];
+
+        let day = this.state.daysOfWeek[d.getDay()];
         let date = d.getDate();
-        let month = months[d.getMonth()];
+        let month = this.state.mounthsOfYear[d.getMonth()];
         let year = d.getFullYear();
 
         return `${day} ${date} ${month} ${year}`
     }
 
     render() {
+        let town = ["Stara Zagora", "Sofia", "Haskovo"]
+        let townOnBulgarian = ["Стара Загора", "София", "Хасково"];
+        let bulgaria = "България";
+        let weatherCondition = ["Clear", "Clouds"]
+        let weatherConditionOnBulgarian = ["Слънчево", "Облаци"];
+
+        for (let i = 0; i < town.length; i += 1) {
+            if (this.state.name === town[i]) {
+                this.setState({ name: townOnBulgarian[i] })
+            }
+            if (this.state.weather === weatherCondition[i]) {
+                this.setState({ weather: weatherConditionOnBulgarian[i] })
+            }
+        }
+
+        if (this.state.country === "BG") {
+            this.setState({ country: bulgaria })
+        }
+
+
         return (
             <div className="side-nav">
                 <Clock />
