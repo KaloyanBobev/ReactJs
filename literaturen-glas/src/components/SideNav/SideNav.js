@@ -74,11 +74,11 @@ export default class SideNav extends React.Component {
     }
 
     render() {
-        let town = ["Stara Zagora", "Sofia", "Haskovo"]
-        let townOnBulgarian = ["Стара Загора", "София", "Хасково"];
+        let town = ["Stara Zagora", "Sofia", "Haskovo", "Plovdiv"]
+        let townOnBulgarian = ["Стара Загора", "София", "Хасково", "Пловдив"];
         let bulgaria = "България";
-        let weatherCondition = ["Clear", "Clouds"]
-        let weatherConditionOnBulgarian = ["Слънчево", "Облаци"];
+        let weatherCondition = ["Clear", "Clouds", "Rain"]
+        let weatherConditionOnBulgarian = ["Слънчево", "Облаци", "Валежи"];
 
         for (let i = 0; i < town.length; i += 1) {
             if (this.state.name === town[i]) {
