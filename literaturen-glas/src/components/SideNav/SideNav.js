@@ -5,9 +5,8 @@ import Clock from '../Clock/Clock';
 import datesAndMonths from '../../data/date.json';
 
 const KEY = "2b5a2ac09bf7d75d7be4aec6429fa12f";
-const FORECAST_KEY = "fb0a57290cef3e1173e60aeb556e7ac1";
 const BASE = "https://api.openweathermap.org/data/2.5/";
-const CNT = 4;
+
 
 export default class SideNav extends React.Component {
     constructor() {
@@ -20,7 +19,6 @@ export default class SideNav extends React.Component {
             feels_like: '',
             daysOfWeek: '',
             mounthsOfYear: '',
-            forecastTemp: ''
 
         }
         this.changeHandler = this.changeHandler.bind(this);
@@ -31,16 +29,7 @@ export default class SideNav extends React.Component {
         this.setState({ query: e.target.value })
     }
 
-    fetchForecast() {
-        fetch(`${BASE}forecast/daily?q=london&cnt=4&units=metric&APPID=${FORECAST_KEY}`)
-            .then(res => res.json())
-            .then(data => {
-                this.setState({
-                    forecastTemp: data.main
-                })
-                console.log(data);
-            })
-    }
+
 
     fetchData() {
         fetch(`${BASE}weather?q=${this.state.query}&units=metric&lang=bg&APPID=${KEY}`)
@@ -51,10 +40,11 @@ export default class SideNav extends React.Component {
                     country: data.sys.country,
                     temp: data.main.temp,
                     weather: data.weather[0].main,
+
                     query: ""
                 })
 
-                //  console.log(data);
+                console.log(data);
             })
             .catch(error => {
                 console.log("An error occurred while trying to fetch data from Foursquare: " +
@@ -62,9 +52,11 @@ export default class SideNav extends React.Component {
             })
     }
 
+
+
     componentDidMount() {
         this.fetchData();
-        this.fetchForecast();
+
         this.setState({
             daysOfWeek: datesAndMonths.daysOnBulgarian,
             mounthsOfYear: datesAndMonths.monthsOnBulgarian
@@ -94,7 +86,6 @@ export default class SideNav extends React.Component {
         let weatherConditionOnBulgarian = ["Слънчево", "Облаци", "Валежи", "Мъгла"];
 
         for (let i = 0; i < weatherCondition.length; i += 1) {
-
             if (this.state.weather === weatherCondition[i]) {
                 this.setState({ weather: weatherConditionOnBulgarian[i] })
             }
@@ -125,11 +116,10 @@ export default class SideNav extends React.Component {
                 <div className="weather-box">
                     <div>{this.state.weather}</div>
                     <div className="temp">{Math.round(this.state.temp)}&#176;C</div>
+
+
                 </div>
-                <div className="weather-box">
-                    <div>{this.state.weather}</div>
-                    <div className="temp">{Math.round(this.state.forecastTemp)}&#176;C</div>
-                </div>
+
             </div>
 
         )
