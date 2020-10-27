@@ -12,14 +12,22 @@
 }
 
 header {
-    display: flex-box;
+    display: flex;
     color: $shadow;
     background-color: $background-color;
     font-weight: bolder;
     font-size: 1.3rem;
     width: 100%;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+    .language-btn {
+        font-size: 1rem;
+        display: flex;
+        button {
+            outline: none;
+            margin: 0 3%;
+        }
+    }
 }
 .drop-down-menu > div {
     background-color: $background-color;
