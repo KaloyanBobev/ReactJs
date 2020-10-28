@@ -1,10 +1,20 @@
 {
-    "name": "Poetry voice",
-    "home": "Home",
-    "publishedEditions": "Printing press",
-    "newspapers": "Newspapaers",
-    "books": "Books and poetry",
-    "photoGallery": "Photo gallery",
-    "forUs": "For us",
-    "contacts": "Contacts"
+    "header": {
+        "name": "Literary voice",
+        "home": "Home",
+        "publishedEditions": "Printing press",
+        "newspapers": "Newspapaers",
+        "books": "Books and poetry",
+        "photoGallery": "Photo gallery",
+        "forUs": "About us",
+        "contacts": "Contacts"
+    },
+    "read": {
+        "readLess": "Read less ▲",
+        "readMore": "Read more ▼"
+    },
+    "booksTrans": {
+        "header": "List of books",
+        "sort": "Sort by author name:"
+    }
 }
