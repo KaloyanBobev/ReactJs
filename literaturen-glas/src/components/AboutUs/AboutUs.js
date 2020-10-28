@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import center from '../../data/home.json';
 import './AboutUs.scss';
+import { withTranslation } from 'react-i18next';
+
+
+class LegacyComponentClass extends React.Component {
+
+    constructor(props) {
+        super()
+    }
+    render() {
+        const { t } = this.props;
+
+        return (
+            <span>{t(this.props.read)}</span>
+        )
+    }
+}
+
+const MyComponent = withTranslation()(LegacyComponentClass)
 
 class AboutUs extends React.Component {
+
     constructor() {
         super();
         this.state = {
@@ -20,6 +39,7 @@ class AboutUs extends React.Component {
     }
 
     render() {
+
         return (
             <section id="second-article" className="col-md-8 offset-md-2">
                 <h2>{this.state.info.centerHeading}</h2>
@@ -31,10 +51,12 @@ class AboutUs extends React.Component {
                         <div>{this.state.info.base}</div>
                     </div>
                     : null}
-                <a href="#second-article" onClick={this.handleChange}>
-                    {this.state.isTextVisible
-                        ? <span>Прочети по-малко ▲</span>
-                        : <span>Прочети повече ▼</span>}</a>
+                <Suspense fallback="loading">
+                    <a href="#second-article" onClick={this.handleChange}>
+                        {this.state.isTextVisible
+                            ? <MyComponent read={'read.readLess'} />
+                            : <MyComponent read={'read.readMore'} />}</a>
+                </Suspense>
             </section>
         )
     }
