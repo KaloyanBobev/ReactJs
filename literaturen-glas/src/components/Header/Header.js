@@ -19,18 +19,18 @@ function Header() {
         <div>
             <header>
                 <Navbar expand="lg" sticky="top">
-                    <Navbar.Brand href="/" className="logo">{t('name')}</Navbar.Brand>
+                    <Navbar.Brand href="/" className="logo">{t('header.name')}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto ">
-                            <Nav.Link href="/home" >{t('home')}</Nav.Link>
-                            <NavDropdown title={t('publishedEditions')} id="basic-nav-dropdown" className="drop-down-menu">
-                                <NavDropdown.Item href="/newspapers" >{t('newspapers')}</NavDropdown.Item>
-                                <NavDropdown.Item href="/books" >{t('books')}</NavDropdown.Item>
+                            <Nav.Link href="/home" >{t('header.home')}</Nav.Link>
+                            <NavDropdown title={t('header.publishedEditions')} id="basic-nav-dropdown" className="drop-down-menu">
+                                <NavDropdown.Item href="/newspapers" >{t('header.newspapers')}</NavDropdown.Item>
+                                <NavDropdown.Item href="/books" >{t('header.books')}</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="/photo-gallery">{t('photoGallery')}</Nav.Link>
-                            <Nav.Link href="/about" >{t('forUs')}</Nav.Link>
-                            <Nav.Link href="/contact" >{t('contacts')}</Nav.Link>
+                            <Nav.Link href="/photo-gallery">{t('header.photoGallery')}</Nav.Link>
+                            <Nav.Link href="/about" >{t('header.forUs')}</Nav.Link>
+                            <Nav.Link href="/contact" >{t('header.contacts')}</Nav.Link>
                         </Nav>
                         <div className="language-btn">
                             <button onClick={() => handleClick('bg')}>
