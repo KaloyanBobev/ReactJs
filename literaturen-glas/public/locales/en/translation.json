@@ -15,6 +15,16 @@
     },
     "booksTrans": {
         "header": "List of books",
-        "sort": "Sort by author name:"
+        "sort": "Sort by author name:",
+        "author": "Author",
+        "name": "Title",
+        "style": "Style",
+        "issueDate": "Date of issue"
+    },
+    "contact": {
+        "center": "Community center „Daskal Petar Ivanov”",
+        "address": "Address: Stara Zagora, 4 Hristo Botev",
+        "phoneNumber": "home phone:+359 42 649110",
+        "mobile": "mobile phone:+359 888 790135"
     }
 }
