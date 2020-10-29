@@ -23,22 +23,22 @@ function Header() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto ">
-                            <Nav.Link href="/home" >{t('header.home')}</Nav.Link>
+                            <Nav.Link href="/home" id="home-link">{t('header.home')}</Nav.Link>
                             <NavDropdown title={t('header.publishedEditions')} id="basic-nav-dropdown" className="drop-down-menu">
                                 <NavDropdown.Item href="/newspapers" >{t('header.newspapers')}</NavDropdown.Item>
                                 <NavDropdown.Item href="/books" >{t('header.books')}</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="/photo-gallery">{t('header.photoGallery')}</Nav.Link>
-                            <Nav.Link href="/about" >{t('header.forUs')}</Nav.Link>
+                            <Nav.Link href="/photo-gallery" id="photo-gallery-link">{t('header.photoGallery')}</Nav.Link>
+                            <Nav.Link href="/about" id="about-link">{t('header.forUs')}</Nav.Link>
                             <Nav.Link href="/contact" >{t('header.contacts')}</Nav.Link>
                         </Nav>
                         <div className="language-btn">
-                            <button onClick={() => handleClick('bg')}>
-                                Bul
-                            </button>
-                            <button onClick={() => handleClick('en')}>
-                                Eng
-                            </button>
+                            <input type="image" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bul" />
+
+
+                            <input type="image" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="eng" />
+
+
                         </div>
                     </Navbar.Collapse>
                 </Navbar>
