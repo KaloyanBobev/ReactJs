@@ -46,7 +46,10 @@ class ImportantMessage extends React.Component {
     render() {
 
         return (
-            <MyComponent handleChange={this.handleChange} isTextVisible={this.state.isTextVisible} />
+            <MyComponent
+                handleChange={this.handleChange}
+                isTextVisible={this.state.isTextVisible}
+            />
         )
     }
 }
