@@ -13,8 +13,6 @@ function Header() {
         i18n.changeLanguage(lang);
     }
 
-
-
     return (
         <div>
             <header>
@@ -34,20 +32,14 @@ function Header() {
                         </Nav>
                         <div className="language-btn">
                             <input type="image" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bul" />
-
-
                             <input type="image" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="eng" />
-
-
                         </div>
                     </Navbar.Collapse>
                 </Navbar>
-
             </header>
             <img className="img-fluid" src={img} alt="navbar background" />
-        </div >
+        </div>
     )
 }
-
 
 export default Header;
