@@ -10,13 +10,15 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
-        <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={<div>Loading</div>}>
+        <BrowserRouter>
+
           <Header />
-        </Suspense>
-        <Main />
-      </BrowserRouter>
-      <Footer />
+
+          <Main />
+        </BrowserRouter>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
