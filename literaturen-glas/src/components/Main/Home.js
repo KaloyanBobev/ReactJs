@@ -3,6 +3,19 @@ import ImportantMessage from '../ImportantMessage/ImportantMessage';
 import center from '../../data/home.json';
 import './Home.scss';
 import SideNav from '../SideNav/SideNav';
+import { withTranslation } from 'react-i18next';
+
+class LegacyComponentClass extends React.Component {
+
+    render() {
+        const { t } = this.props;
+        return (
+            <span>{t(this.props.read)}</span>
+        )
+    }
+}
+
+const MyComponent = withTranslation()(LegacyComponentClass);
 
 class Home extends React.Component {
 
@@ -45,8 +58,8 @@ class Home extends React.Component {
                                 : null}
                             <a href="#first-article" onClick={this.handleChange}>
                                 {this.state.isTextVisible
-                                    ? <span>Прочети по-малко ▲</span>
-                                    : <span>Прочети повече ▼</span>}</a>
+                                    ? <MyComponent read={'read.readLess'} />
+                                    : <MyComponent read={'read.readMore'} />}</a>
                         </div>
                     </article>
                 </div>
