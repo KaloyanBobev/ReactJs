@@ -26,5 +26,12 @@
         "address": "Address: Stara Zagora, 4 Hristo Botev",
         "phoneNumber": "home phone:+359 42 649110",
         "mobile": "mobile phone:+359 888 790135"
+    },
+    "footerPage": {
+        "1": "All rights reserved. CopyRight © year: 2015-"
+    },
+    "messagePage": {
+        "results": "RESULTS FROM COMPETIOTION",
+        "place": "FIRST PLACE"
     }
 }
