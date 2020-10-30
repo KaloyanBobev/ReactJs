@@ -6,9 +6,6 @@ import { withTranslation } from 'react-i18next';
 
 class LegacyComponentClass extends React.Component {
 
-    constructor(props) {
-        super()
-    }
     render() {
         const { t } = this.props;
 
