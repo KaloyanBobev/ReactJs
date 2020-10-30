@@ -33,5 +33,17 @@
     "messagePage": {
         "results": "RESULTS FROM COMPETIOTION",
         "place": "FIRST PLACE"
+    },
+    "newspapersPage": {
+        "newest": "Show newest",
+        "oldest": "Show oldest",
+        "read": "Read",
+        "download": "Download"
+    },
+    "booksPage": {
+        "header": "All photos",
+        "newspapersPhoto": "Books and newspapers",
+        "photos": "Events",
+        "childrenWorkshops": "Children workshops"
     }
 }
