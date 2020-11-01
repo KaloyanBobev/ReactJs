@@ -1,6 +1,67 @@
 import React from 'react';
 import './PhotoGallery.scss';
 import imagesSorce from '../../data/images.json';
+import { withTranslation } from 'react-i18next';
+
+class LegacyComponentClass extends React.Component {
+
+    render() {
+        const { t } = this.props;
+
+        return (
+            <section id="gallery">
+                <h1>{t('booksPage.header')}</h1>
+                <h3>{t('booksPage.newspapersPhoto')}</h3>
+                <div className="row">
+                    {this.props.images.slice(0, 7).map((value) => {
+                        return (
+                            <div key={value.src} className="col=md-3 offset-md-1">
+                                <a href={require("../../images/books/" + value.src + ".jpg")}>
+                                    <img src={require("../../images/books/" + value.src + ".jpg")} target="_blank" title={value.src} alt="book covers" />
+                                </a>
+                            </div>
+                        )
+                    })}
+                </div>
+                <h3>{t('booksPage.photos')}</h3>
+                <div className="row">
+                    {this.props.images.slice(7, 28).map((value, index) => {
+                        return (
+                            <div key={index} className="col=md-3 offset-md-1">
+                                <a href={require("../../images/gallery/" + value.src + ".jpg")}>
+                                    <img src={require("../../images/gallery/" + value.src + ".jpg")} target="_blank" title={value.src} alt="important meetings" />
+                                </a>
+                            </div>
+                        )
+                    })}
+                    {this.props.images.slice(28, 43).map((value, index) => {
+                        return (
+                            <div key={index} className="col=md-3 offset-md-1">
+                                <a href={require("../../images/gallery/photos2020/" + value.src + ".jpg")}>
+                                    <img src={require("../../images/gallery/photos2020/" + value.src + ".jpg")} target="_blank" title={value.src} alt="important meetings" />
+                                </a>
+                            </div>
+                        )
+                    })}
+                </div>
+                <h3>{t('booksPage.childrenWorkshops')}</h3>
+                <div className="row">
+                    {this.props.images.slice(43, 46).map((value) => {
+                        return (
+                            <div key={value.src} className="col=md-3 offset-md-1">
+                                <a href={require("../../images/children-work/" + value.src + ".jpg")}>
+                                    <img src={require("../../images/children-work/" + value.src + ".jpg")} target="_blank" title={value.src} alt="children work" />
+                                </a>
+                            </div>
+                        )
+                    })}
+                </div>
+            </section>
+        )
+    }
+}
+
+const MyComponent = withTranslation()(LegacyComponentClass);
 
 class PhotoGallery extends React.Component {
     constructor() {
@@ -16,54 +77,8 @@ class PhotoGallery extends React.Component {
     }
     render() {
         return (
-            <section id="gallery">
-                <h1>Всички снимки</h1>
-                <h3>Снимки на корици и вестници</h3>
-                <div className="row">
-                    {this.state.images.slice(0, 7).map((value) => {
-                        return (
-                            <div key={value.src} className="col=md-3 offset-md-1">
-                                <a href={require("../../images/books/" + value.src + ".jpg")}>
-                                    <img src={require("../../images/books/" + value.src + ".jpg")} target="_blank" title={value.src} alt="book covers" />
-                                </a>
-                            </div>
-                        )
-                    })}
-                </div>
-                <h3>Общи снимки</h3>
-                <div className="row">
-                    {this.state.images.slice(7, 28).map((value, index) => {
-                        return (
-                            <div key={index} className="col=md-3 offset-md-1">
-                                <a href={require("../../images/gallery/" + value.src + ".jpg")}>
-                                    <img src={require("../../images/gallery/" + value.src + ".jpg")} target="_blank" title={value.src} alt="important meetings" />
-                                </a>
-                            </div>
-                        )
-                    })}
-                    {this.state.images.slice(28, 43).map((value, index) => {
-                        return (
-                            <div key={index} className="col=md-3 offset-md-1">
-                                <a href={require("../../images/gallery/photos2020/" + value.src + ".jpg")}>
-                                    <img src={require("../../images/gallery/photos2020/" + value.src + ".jpg")} target="_blank" title={value.src} alt="important meetings" />
-                                </a>
-                            </div>
-                        )
-                    })}
-                </div>
-                <h3>Детски изяви</h3>
-                <div className="row">
-                    {this.state.images.slice(43, 46).map((value) => {
-                        return (
-                            <div key={value.src} className="col=md-3 offset-md-1">
-                                <a href={require("../../images/children-work/" + value.src + ".jpg")}>
-                                    <img src={require("../../images/children-work/" + value.src + ".jpg")} target="_blank" title={value.src} alt="children work" />
-                                </a>
-                            </div>
-                        )
-                    })}
-                </div>
-            </section>
+            <MyComponent
+                images={this.state.images} />
         )
     }
 }
