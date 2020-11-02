@@ -45,5 +45,10 @@
         "newspapersPhoto": "Books and newspapers",
         "photos": "Events",
         "childrenWorkshops": "Children workshops"
+    },
+    "sidenav": {
+        "header": "Weather forecast",
+        "enterTown": "Enter town",
+        "lang": "en"
     }
 }
