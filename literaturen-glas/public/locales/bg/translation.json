@@ -45,5 +45,10 @@
         "newspapersPhoto": "Снимки на корици и вестници",
         "photos": "Важни събития",
         "childrenWorkshops": "Детски изяви"
+    },
+    "sidenav": {
+        "header": "Прогноза за времето",
+        "enterTown": "Въведи град",
+        "lang": "bg"
     }
 }
