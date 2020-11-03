@@ -5,6 +5,7 @@ import Clock from '../Clock/Clock';
 import datesAndMonths from '../../data/date.json';
 import { withTranslation } from 'react-i18next';
 
+
 class LegacyComponentClass extends React.Component {
 
     render() {
@@ -13,6 +14,7 @@ class LegacyComponentClass extends React.Component {
         return (
             <>
                 <h4>{t('sidenav.header')}</h4>
+
                 <input
                     type="text"
                     className="search-bar"
@@ -20,7 +22,6 @@ class LegacyComponentClass extends React.Component {
                     placeholder={t('sidenav.enterTown')}
                     onChange={this.props.changeHandler}
                     onKeyUp={this.props.searchTown}
-                    lang={t('sidenav.lang')}
                 />
                 <div className="location-box">
                     <div className="location">
@@ -57,7 +58,7 @@ export default class SideNav extends React.Component {
             feels_like: '',
             daysOfWeek: '',
             mounthsOfYear: '',
-
+            lng: ''
 
         }
         this.changeHandler = this.changeHandler.bind(this);
@@ -72,7 +73,7 @@ export default class SideNav extends React.Component {
 
     fetchData() {
 
-        fetch(`${BASE}weather?q=${this.state.query}&units=metric&lang=bg&APPID=${KEY}`)
+        fetch(`${BASE}weather?q=${this.state.query}&units=metric&lang=en&APPID=${KEY}`)
             .then(res => res.json())
             .then(data => {
                 this.setState({
@@ -97,15 +98,15 @@ export default class SideNav extends React.Component {
         this.fetchData();
 
         this.setState({
-            daysOfWeek: datesAndMonths.daysOnBulgarian,
-            mounthsOfYear: datesAndMonths.monthsOnBulgarian
+            daysOfWeek: datesAndMonths.days,
+            mounthsOfYear: datesAndMonths.months
         })
 
     }
 
-    searchTown(event) {
+    searchTown(event, lng) {
         if (event.key === "Enter") {
-            this.fetchData();
+            this.fetchData(lng);
         }
     }
 
@@ -120,19 +121,16 @@ export default class SideNav extends React.Component {
     }
 
     render() {
-        let bulgaria = "България";
-        let weatherCondition = ["Clear", "Clouds", "Rain", "Fog"]
-        let weatherConditionOnBulgarian = ["Слънчево", "Облаци", "Валежи", "Мъгла"];
 
-        for (let i = 0; i < weatherCondition.length; i += 1) {
-            if (this.state.weather === weatherCondition[i]) {
-                this.setState({ weather: weatherConditionOnBulgarian[i] })
-            }
-        }
 
-        if (this.state.country === "BG") {
-            this.setState({ country: bulgaria })
-        }
+
+        // for (let i = 0; i < weatherCondition.length; i += 1) {
+        //     if (this.state.weather === weatherCondition[i]) {
+        //         this.setState({ weather: weatherConditionOnBulgarian[i] })
+        //     }
+        // }
+
+
 
         return (
             <div className="side-nav">
@@ -148,7 +146,9 @@ export default class SideNav extends React.Component {
                     country={this.state.country}
                     weather={this.state.weather}
                     temp={this.state.temp}
-
+                    changeHandler={this.changeHandler}
+                    searchTown={this.searchTown}
+                    lng={this.state.lng}
                 />
             </div>
         )
