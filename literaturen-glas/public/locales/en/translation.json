@@ -48,13 +48,6 @@
     },
     "sidenav": {
         "header": "Weather forecast",
-        "enterTown": "Enter town",
-        "lang": "en",
-        "weatherCondition": {
-            "clear": "Sunny",
-            "clouds": "Clouds",
-            "rain": "Rain",
-            "fog": "Fog"
-        }
+        "enterTown": "Enter town"
     }
 }
