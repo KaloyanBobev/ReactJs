@@ -48,13 +48,6 @@
     },
     "sidenav": {
         "header": "Прогноза за времето",
-        "enterTown": "Въведи град",
-        "lang": "bg",
-        "weatherCondition": {
-            "clear": "Слънчево",
-            "clouds": "Облаци",
-            "rain": "Валежи",
-            "fog": "Мъгла"
-        }
+        "enterTown": "Въведи град"
     }
 }
