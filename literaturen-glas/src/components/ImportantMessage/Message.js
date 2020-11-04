@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Message() {
+function Message(isVisible) {
 
     return (
-        <div className={this.props.isVisible}>
+        <div className={isVisible}>
             <h3>Димитър ХРИСТОВ Черняев - София</h3>
             <h3>УБЕЖИЩЕ</h3>
             <pre>
@@ -197,7 +197,6 @@ function Message() {
             </pre>
         </div>
     )
-
 }
 
 export default Message;
