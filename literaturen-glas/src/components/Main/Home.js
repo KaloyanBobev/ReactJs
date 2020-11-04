@@ -34,7 +34,9 @@ class Home extends React.Component {
     }
 
     handleChange() {
-        this.setState(prevState => ({ isTextVisible: !prevState.isTextVisible }))
+        this.setState(prevState => ({
+            isTextVisible: !prevState.isTextVisible
+        }))
     }
 
     render() {
