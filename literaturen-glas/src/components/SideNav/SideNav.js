@@ -5,7 +5,6 @@ import Clock from '../Clock/Clock';
 import datesAndMonths from '../../data/date.json';
 import { withTranslation } from 'react-i18next';
 
-
 class LegacyComponentClass extends React.Component {
 
     render() {
@@ -14,7 +13,6 @@ class LegacyComponentClass extends React.Component {
         return (
             <>
                 <h4>{t('sidenav.header')}</h4>
-
                 <input
                     type="text"
                     className="search-bar"
@@ -29,7 +27,6 @@ class LegacyComponentClass extends React.Component {
                         {this.props.country}
                     </div>
                 </div>
-
                 <div className="weather-box">
                     <div>{this.props.weather}</div>
                     <div className="temp">
@@ -46,7 +43,6 @@ const MyComponent = withTranslation()(LegacyComponentClass);
 const KEY = "2b5a2ac09bf7d75d7be4aec6429fa12f";
 const BASE = "https://api.openweathermap.org/data/2.5/";
 
-
 export default class SideNav extends React.Component {
     constructor() {
         super();
@@ -58,8 +54,6 @@ export default class SideNav extends React.Component {
             feels_like: '',
             daysOfWeek: '',
             mounthsOfYear: '',
-            lng: ''
-
         }
         this.changeHandler = this.changeHandler.bind(this);
         this.searchTown = this.searchTown.bind(this);
@@ -72,7 +66,6 @@ export default class SideNav extends React.Component {
 
 
     fetchData() {
-
         fetch(`${BASE}weather?q=${this.state.query}&units=metric&lang=en&APPID=${KEY}`)
             .then(res => res.json())
             .then(data => {
@@ -101,7 +94,6 @@ export default class SideNav extends React.Component {
             daysOfWeek: datesAndMonths.days,
             mounthsOfYear: datesAndMonths.months
         })
-
     }
 
     searchTown(event, lng) {
@@ -121,17 +113,6 @@ export default class SideNav extends React.Component {
     }
 
     render() {
-
-
-
-        // for (let i = 0; i < weatherCondition.length; i += 1) {
-        //     if (this.state.weather === weatherCondition[i]) {
-        //         this.setState({ weather: weatherConditionOnBulgarian[i] })
-        //     }
-        // }
-
-
-
         return (
             <div className="side-nav">
                 <Clock />
