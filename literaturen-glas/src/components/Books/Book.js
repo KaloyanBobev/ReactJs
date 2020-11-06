@@ -16,16 +16,20 @@ function Book({ poems, tracked }) {
             </article>
 
             {
-                poems.filter(name => name.author.toLocaleLowerCase().includes(tracked.toLocaleLowerCase())).map((book) => {
-                    return (
-                        <article key={book.id} className="row">
-                            <div className="col-md-3 ">{book.author}</div>
-                            <div className="col-md-3">{book.name}</div>
-                            <div className="col-md-3">{book.species}</div>
-                            <div className="col-md-3">{book.date}</div>
-                        </article>
-                    )
-                })
+                poems.filter(name =>
+                    name.author
+                        .toLocaleLowerCase()
+                        .includes(tracked.toLocaleLowerCase()))
+                    .map((book) => {
+                        return (
+                            <article key={book.id} className="row">
+                                <div className="col-md-3 ">{book.author}</div>
+                                <div className="col-md-3">{book.name}</div>
+                                <div className="col-md-3">{book.species}</div>
+                                <div className="col-md-3">{book.date}</div>
+                            </article>
+                        )
+                    })
             }
         </div>
     )
