@@ -31,8 +31,8 @@ function Header() {
                             <Nav.Link href="/contact" >{t('header.contacts')}</Nav.Link>
                         </Nav>
                         <div className="language-btn">
-                            <input type="image" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bul" />
-                            <input type="image" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="eng" />
+                            <input type="image" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bg-bg" />
+                            <input type="image" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="en-us" />
                         </div>
                     </Navbar.Collapse>
                 </Navbar>
