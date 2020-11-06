@@ -39,15 +39,23 @@ header {
 
     .language-btn {
         display: flex;
+
         input {
+            margin: 0 5%;
             width: 1.5rem;
             height: auto;
             border-radius: 5px 5px;
+        }
 
-            margin: 0 5%;
+        @media (max-width: 1000px) {
+            input {
+                float: none;
+                margin: 0 2% 0 0;
+            }
         }
     }
 }
+
 .drop-down-menu > div {
     background-color: $background-color;
     & > a:hover {
