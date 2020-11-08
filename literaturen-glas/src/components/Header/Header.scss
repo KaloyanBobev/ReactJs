@@ -20,7 +20,9 @@ header {
     font-size: 1.3rem;
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-
+    #header-container {
+        width: 100%;
+    }
     #home-link {
         width: 6rem;
     }
@@ -36,21 +38,27 @@ header {
     #about-link {
         width: 7rem;
     }
-
-    .language-btn {
+    #basic-navbar-nav {
         display: flex;
 
-        input {
-            margin: 0 5%;
-            width: 1.5rem;
-            height: auto;
-            border-radius: 5px 5px;
-        }
+        .language-container {
+            justify-content: space-around;
+            display: flex;
+            .lng-btn {
+                flex-direction: row;
+                margin: 0 5%;
+                width: 1.5rem;
+                height: auto;
+                border-radius: 5px 5px;
+            }
 
-        @media (max-width: 1000px) {
-            input {
-                float: none;
-                margin: 0 2% 0 0;
+            @media (max-width: 1000px) {
+                #basic-navbar-nav {
+                    flex-direction: column;
+                    input {
+                        margin: 0 2% 0 0;
+                    }
+                }
             }
         }
     }
