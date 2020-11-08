@@ -16,7 +16,7 @@ function Header() {
     return (
         <div>
             <header>
-                <Navbar expand="lg" sticky="top">
+                <Navbar expand="lg" sticky="top" id="header-container">
                     <Navbar.Brand href="/" className="logo">{t('header.name')}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -30,10 +30,11 @@ function Header() {
                             <Nav.Link href="/about" id="about-link">{t('header.forUs')}</Nav.Link>
                             <Nav.Link href="/contact" >{t('header.contacts')}</Nav.Link>
                         </Nav>
-                        <div className="language-btn">
-                            <input type="image" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bg-bg" />
-                            <input type="image" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="en-us" />
+                        <div className="language-container">
+                            <input type="image" className="lng-btn" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bg-bg" />
+                            <input type="image" className="lng-btn" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="en-us" />
                         </div>
+
                     </Navbar.Collapse>
                 </Navbar>
             </header>
