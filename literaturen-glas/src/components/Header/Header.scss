@@ -20,6 +20,7 @@ header {
     font-size: 1.3rem;
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
     #header-container {
         width: 100%;
     }
@@ -39,11 +40,9 @@ header {
         width: 7rem;
     }
     #basic-navbar-nav {
-        display: flex;
-
         .language-container {
-            justify-content: space-around;
             display: flex;
+            justify-content: end;
             .lng-btn {
                 flex-direction: row;
                 margin: 0 5%;
@@ -51,19 +50,17 @@ header {
                 height: auto;
                 border-radius: 5px 5px;
             }
-
-            @media (max-width: 1000px) {
-                #basic-navbar-nav {
-                    flex-direction: column;
-                    input {
-                        margin: 0 2% 0 0;
-                    }
-                }
-            }
         }
     }
 }
-
+@media (max-width: 1000px) {
+    .language-container {
+        margin-left: -6%;
+        .lng-btn {
+            margin: 0 2%;
+        }
+    }
+}
 .drop-down-menu > div {
     background-color: $background-color;
     & > a:hover {
