@@ -114,7 +114,11 @@ export default class SideNav extends React.Component {
 
     render() {
         return (
-            <div className="side-nav">
+            <div className={(typeof this.state.weather != 'undefined')
+                ? (this.state.weather === "Clear"
+                    ? "side-nav sunny"
+                    : "side-nav")
+                : "side-nav"}>
                 <Clock />
                 <div className="date">
                     {this.dateBuilder(new Date())}

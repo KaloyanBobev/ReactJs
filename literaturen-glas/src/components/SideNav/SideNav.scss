@@ -8,6 +8,16 @@
     border-radius: 5px;
     text-align: center;
     background-color: $footer;
+    &.sunny {
+        background-image: url("../../images/sunny.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+
+    .cloud {
+        background-image: url("../../images/bg-flag-btn.png");
+    }
 
     h4 {
         margin-top: 15%;
