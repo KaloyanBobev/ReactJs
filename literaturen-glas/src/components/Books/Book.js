@@ -16,7 +16,7 @@ function Book({ poems, tracked }) {
             </article>
 
             {
-                poems.filter(name =>
+                poems.filter((name) =>
                     name.author
                         .toLocaleLowerCase()
                         .includes(tracked.toLocaleLowerCase()))
