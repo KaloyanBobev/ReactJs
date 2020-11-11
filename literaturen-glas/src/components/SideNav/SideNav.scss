@@ -8,15 +8,32 @@
     border-radius: 5px;
     text-align: center;
     background-color: $footer;
-    &.sunny {
+
+    &.Clear {
         background-image: url("../../images/sunny.jpg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom;
     }
 
-    .cloud {
-        background-image: url("../../images/bg-flag-btn.png");
+    &.Clouds {
+        background-image: url("../../images/clouds.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+
+    &.Fog {
+        background-image: url("../../images/fog.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+    &.Rain {
+        background-image: url("../../images/rain.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
     }
 
     h4 {
