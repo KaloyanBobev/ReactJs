@@ -8,32 +8,28 @@
     border-radius: 5px;
     text-align: center;
     background-color: $footer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
 
     &.Clear {
         background-image: url("../../images/sunny.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
     }
 
     &.Clouds {
         background-image: url("../../images/clouds.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
     }
 
     &.Fog {
         background-image: url("../../images/fog.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
     }
+
     &.Rain {
         background-image: url("../../images/rain.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
+    }
+
+    &.Snow {
+        background-image: url("../../images/snow.jpg");
     }
 
     h4 {
