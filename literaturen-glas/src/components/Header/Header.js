@@ -34,7 +34,6 @@ function Header() {
                             <input type="image" className="lng-btn" src={require('../../images/bg-flag-btn.png')} onClick={() => handleClick('bg')} alt="bg-bg" />
                             <input type="image" className="lng-btn" src={require('../../images/en-flag-btn.png')} onClick={() => handleClick('en')} alt="en-us" />
                         </div>
-
                     </Navbar.Collapse>
                 </Navbar>
             </header>
