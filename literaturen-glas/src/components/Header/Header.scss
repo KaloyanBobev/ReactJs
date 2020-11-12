@@ -39,26 +39,30 @@ header {
     #about-link {
         width: 7rem;
     }
+
     #basic-navbar-nav {
         .language-container {
             display: flex;
             justify-content: end;
             .lng-btn {
                 flex-direction: row;
-                margin: 0 5%;
                 width: 1.5rem;
                 height: auto;
                 border-radius: 5px 5px;
             }
+
+            @media (min-width: 1000px) {
+                .lng-btn {
+                    margin: 0 5%;
+                }
+            }
         }
     }
 }
+
 @media (max-width: 1000px) {
-    .language-container {
-        margin-left: -6%;
-        .lng-btn {
-            margin: 0 2%;
-        }
+    .lng-btn {
+        margin-right: 3%;
     }
 }
 .drop-down-menu > div {
