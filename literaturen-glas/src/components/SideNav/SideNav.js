@@ -63,8 +63,6 @@ export default class SideNav extends React.Component {
         this.setState({ query: e.target.value })
     }
 
-
-
     fetchData() {
         fetch(`${BASE}weather?q=${this.state.query}&units=metric&lang=en&APPID=${KEY}`)
             .then(res => res.json())
@@ -76,16 +74,12 @@ export default class SideNav extends React.Component {
                     weather: data.weather[0].main,
                     query: ""
                 })
-
-                console.log(data);
             })
             .catch(error => {
                 console.log("An error occurred while trying to fetch data from Foursquare: " +
                     error)
             })
     }
-
-
 
     componentDidMount() {
         this.fetchData();
@@ -103,7 +97,6 @@ export default class SideNav extends React.Component {
     }
 
     dateBuilder(d) {
-
         let day = this.state.daysOfWeek[d.getDay()];
         let date = d.getDate();
         let month = this.state.mounthsOfYear[d.getMonth()];
@@ -113,13 +106,15 @@ export default class SideNav extends React.Component {
     }
 
     render() {
-        const weathertypes = ["Clear", "Clouds", "Fog", "Rain"];
+        const weathertypes = ["Clear", "Clouds", "Fog", "Rain", "Snow"];
         let weatherClass;
+
         for (let i = 0; i < weathertypes.length; i += 1) {
             if (this.state.weather === weathertypes[i]) {
                 weatherClass = this.state.weather;
             }
         }
+
         return (
             <div className={`side-nav ${weatherClass}`}>
                 <Clock />
