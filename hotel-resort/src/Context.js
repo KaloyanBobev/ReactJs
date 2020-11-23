@@ -22,3 +22,4 @@ class RoomProvider extends Component {
 
 const RoomConsumer = RoomContext.Consumer;
 
+export { RoomConsumer, RoomProvider, RoomContext };
