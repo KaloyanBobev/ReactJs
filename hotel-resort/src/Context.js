@@ -7,7 +7,7 @@ class RoomProvider extends Component {
     state = {
         rooms: [],
         sortedRooms: [],
-        featuredrooms: [],
+        featuredRooms: [],
         loading: true
     }
 
@@ -15,10 +15,10 @@ class RoomProvider extends Component {
 
     componentDidMount() {
         let rooms = this.formatData(items);
-        let featureRooms = rooms.filter(room => room.feature === true);
+        let featuredRooms = rooms.filter(room => room.featured === true);
         this.setState({
             rooms,
-            featureRooms,
+            featuredRooms,
             sortedRooms: rooms,
             loading: false
         })
