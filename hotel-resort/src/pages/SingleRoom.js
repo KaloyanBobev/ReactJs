@@ -1,9 +1,22 @@
-import React from 'react'
+import React from 'react';
+import defaultBcg from '../images/room-1.jpeg';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
+import { Link } from 'react-router-dom';
+import { RoomContext } from '../Context';
 
-export default function SingleRoom() {
-    return (
-        <div>
-            Single Room  Page
-        </div>
-    )
+
+export default class SingleRoom extends Comment {
+    constructor(props) {
+        super(props);
+
+    }
+
+    render() {
+        return (
+            <div>
+                Single Room  Page
+            </div>
+        )
+    }
 }
