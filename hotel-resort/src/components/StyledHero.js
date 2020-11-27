@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-const red = "#f15025";
-const SimpleButton = styled.button`
- color:${red};
- background:green;
-font-size:3rem;
-`;
+import defaultImg from '../images/room-1.jpeg';
+
+const StyledHero = styled.header`
+  min-height: 60vh;
+  background: url(${props => prop.img}) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 
-export default SimpleButton;
+export default StyledHero;
