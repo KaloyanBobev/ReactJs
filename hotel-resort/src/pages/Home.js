@@ -5,6 +5,8 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import Services from '../components/Services';
 import FeaturedRoom from '../components/FeaturedRooms';
+import Button from '../components/StyledHero';
+
 
 export default function Home() {
     return (
@@ -18,6 +20,7 @@ export default function Home() {
             </Hero>
             <Services />
             <FeaturedRoom />
+            <Button >TEXT</Button>
         </>
     )
 }
