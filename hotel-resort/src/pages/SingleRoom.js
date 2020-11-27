@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import { RoomContext } from '../Context';
-
+import StyledHero from '../components/StyledHero';
 
 export default class SingleRoom extends React.Component {
     constructor(props) {
@@ -51,6 +51,6 @@ export default class SingleRoom extends React.Component {
                     back to rooms
                     </Link>
             </Banner>
-        </Hero >
+        </Hero>
     }
 }
