@@ -30,6 +30,11 @@ export default function RoomFilter({ rooms }) {
         return <option value={item} key={index}>{item} </option>
     })
 
+    let people = getUnique(rooms, 'capacity');
+    people = people.map((item, index) => {
+        return <option value={item} key={index}>{item}</option>
+    })
+
     return (
         <section className="filter-container">
             <Title title="serarch rooms" />
@@ -40,15 +45,26 @@ export default function RoomFilter({ rooms }) {
                     <select
                         name="type"
                         id="type"
-                        value={type} c
-                        lassName="form-control"
-                        onChange={handleChange}
-                    >
+                        value={type}
+                        className="form-control"
+                        onChange={handleChange} >
                         {types}
                     </select>
                 </div>
-
                 {/*end select type */}
+                {/*guests */}
+                <div className="form-group">
+                    <label htmlFor="capacity">guests </label>
+                    <select
+                        name="capacity"
+                        id="capacity"
+                        value={capacity}
+                        className="form-control"
+                        onChange={handleChange} >
+                        {people}
+                    </select>
+                </div>
+                {/*end guests */}
             </form>
         </section>
     )
