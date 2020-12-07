@@ -5,9 +5,11 @@ import logo from '../images/logo.svg';
 import { FaAlignRight } from 'react-icons/fa';
 
 export default class Navbar extends Component {
+
     state = {
         isOpen: false
     }
+
     hadleToggle = () => {
         this.setState({ isOpen: !this.state.isOpen })
     }
@@ -25,7 +27,6 @@ export default class Navbar extends Component {
                                 className="nav-icon"
                                 onClick={this.hadleToggle} />
                         </button>
-
                     </div>
                     <ul className={this.state.isOpen
                         ? "nav-links show-nav"
