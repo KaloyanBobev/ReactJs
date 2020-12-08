@@ -1,6 +1,6 @@
 import React from 'react';
-import Room from './Room';
 
+import Room from './Room';
 
 export default function RoomList({ rooms }) {
 
@@ -11,6 +11,7 @@ export default function RoomList({ rooms }) {
             </div>
         )
     }
+
     return (
         <section className="roomslist">
             <div className="roomslist-center">
