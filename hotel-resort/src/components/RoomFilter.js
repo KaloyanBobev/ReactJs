@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 import { useContext } from 'react';
 import { RoomContext } from '../Context';
 import Title from '../components/Title';
@@ -123,8 +124,6 @@ export default function RoomFilter({ rooms }) {
                         <label htmlFor="pets">pets</label>
                     </div>
                 </div>
-
-
                 { /*end extras */}
             </form>
         </section>
