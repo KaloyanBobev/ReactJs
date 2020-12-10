@@ -5,7 +5,6 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import RoomContainer from '../components/RoomContainer';
 
-
 export default function Rooms() {
     return (
         <>
