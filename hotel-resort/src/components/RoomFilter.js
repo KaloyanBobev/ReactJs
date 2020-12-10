@@ -116,7 +116,7 @@ export default function RoomFilter({ rooms }) {
                     <div className="single-extra">
                         <input
                             type="checkbox"
-                            d name="pets"
+                            name="pets"
                             id="pets"
                             checked={pets}
                             onChange={handleChange}
