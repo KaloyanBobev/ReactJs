@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 import items from './data';
 
 const RoomContext = React.createContext();
@@ -18,7 +19,6 @@ class RoomProvider extends Component {
         maxSize: 0,
         breakfast: false,
         pets: false
-
     }
 
     // getData
@@ -37,7 +37,6 @@ class RoomProvider extends Component {
             maxPrice,
             maxSize
         })
-
     }
 
     formatData(items) {
@@ -66,8 +65,6 @@ class RoomProvider extends Component {
             [name]: value
         },
             this.filterRooms);
-
-
     }
 
     filterRooms = () => {
