@@ -48,8 +48,6 @@ class Home extends React.Component {
                         <div id="first-article" className="col-md-12  offset-md-2">
                             <h1>{this.state.info.mainHeader}</h1>
                             <h2>{this.state.info.teacher}</h2>
-                            <h2>{this.state.info.voice}</h2>
-                            <h2>{this.state.info.chairman}</h2>
                             <div>{this.state.info.firstEdition}</div>
                             {this.state.isTextVisible
                                 ? <p>
