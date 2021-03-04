@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter } from "react-router-dom";
-import CookieConsent, { Cookies } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 
 import Header from './components/Header/Header.js';
 import Main from './components/Main/Main.js';
