@@ -43,7 +43,6 @@ class Home extends React.Component {
         return (
             <div className="container">
                 <div className="main-container">
-                    <ImportantMessage />
                     <article id="home" className="row">
                         <div id="first-article" className="col-md-12  offset-md-2">
                             <h1>{this.state.info.mainHeader}</h1>
