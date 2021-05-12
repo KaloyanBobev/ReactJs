@@ -1,10 +1,10 @@
 @import "../../globalStylesVariebles.scss";
 
 div#message {
-    border: 2px solid black;
+    border: 5px solid black;
     margin: 3% 10% 6% 10%;
     padding: 2% 10%;
-    border-radius: 5px 5px;
+    border-radius: 1rem 1rem;
     box-shadow: 1px 1px 50px $background-color;
     background-color: #f2eecb;
     font-size: 1.2rem;
