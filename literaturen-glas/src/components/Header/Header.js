@@ -38,7 +38,7 @@ function Header() {
                 </Navbar>
             </header>
             <img className="img-fluid" src={img} alt="navbar background" />
-            <ImportantMessage />
+
         </div>
     )
 }
