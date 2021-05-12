@@ -44,7 +44,9 @@ class Home extends React.Component {
             <div className="container">
                 <div className="main-container">
                     <article id="home" className="row">
+
                         <div id="first-article" className="col-md-12  offset-md-2">
+                            <ImportantMessage />
                             <h1>{this.state.info.mainHeader}</h1>
                             <h2>{this.state.info.teacher}</h2>
                             <div>{this.state.info.firstEdition}</div>
