@@ -7,7 +7,7 @@ div#message {
     border-radius: 1rem 1rem;
     box-shadow: 1px 1px 50px $background-color;
     background-color: #f2eecb;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 900;
     h1,
     h2 {
@@ -21,7 +21,11 @@ div#message {
     h3 {
         margin-top: 2%;
     }
-
+    ul {
+        li {
+            list-style: none;
+        }
+    }
     button {
         width: 11rem;
         padding: 0.2rem;
